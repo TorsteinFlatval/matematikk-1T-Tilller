@@ -1,4 +1,4 @@
-# Matematikk 2P
+# Matematikk 1T
 
 
 
