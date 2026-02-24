@@ -1,12 +1,12 @@
-title: Matematikk 2P
+title: Matematikk 1T
 author: Torstein Flatval, Tiller Videregående Skole
 copyright: "2026"
-logo: _logo/Tiller 2P logo.png
+logo: _logo/Tiller 1T logo.png
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", README.md, LICENSE.md, LICENSE_CONTENT.md, HOWTOWRITE.md]
 description: ""
 
 options:
-  numbered: true
+  numbered: false
 
 execute:
   execute_notebooks: off

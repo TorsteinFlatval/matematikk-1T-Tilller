@@ -1,22 +1,43 @@
 format: jb-book
 
 root: index.md
-options: 
-  numbered: True
+options:
+  numbered: false
 
 parts:
-  - caption: Trigonometri
-    numbered: 1
+  - caption: Programmering
     chapters:
-    - file: book/trigonometri/pythagoras/teori.md
+    - file: book/programmering/for_løkker/teori.md
       sections:
-      - file: book/trigonometri/pythagoras/oppgaver.md
+      - file: book/programmering/for_løkker/oppgaver.md
         title: Oppgaver
-    - file: book/trigonometri/areal/teori.md
+    - file: book/programmering/if_setninger/teori.md
       sections:
-      - file: book/trigonometri/areal/oppgaver.md
+      - file: book/programmering/if_setninger/oppgaver.md
         title: Oppgaver
+    - file: book/programmering/likninger/teori.md
+      sections:
+      - file: book/programmering/likninger/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/likningssystemer/teori.md
+      sections:
+      - file: book/programmering/likningssystemer/oppgaver.md
+        title: Oppgaver
+  - caption: Likninger og ulikheter
+    chapters:
+    - file: book/likninger_og_ulikheter/likningssystemer/teori.md
+      sections:
+      - file: book/likninger_og_ulikheter/likningssystemer/oppgaver.md
+        title: Oppgaver
+    - file: book/likninger_og_ulikheter/ulikheter/teori.md
+      sections:
+      - file: book/likninger_og_ulikheter/ulikheter/oppgaver.md
+        title: Oppgaver
+
+
 
 
     
+
+
 
