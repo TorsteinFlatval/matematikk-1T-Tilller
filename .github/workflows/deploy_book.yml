@@ -18,6 +18,14 @@ jobs:
         with:
           python-version: 3.12.3
 
+      - name: Cache apt packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-texlive-${{ hashFiles('.github/workflows/deploy_book.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-texlive-
+
       - name: Install system dependencies (LaTeX + pdf2svg)
         run: |
           sudo apt-get update
