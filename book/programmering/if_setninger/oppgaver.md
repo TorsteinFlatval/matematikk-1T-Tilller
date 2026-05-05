@@ -145,6 +145,14 @@ else:
 :::
 
 ::::{answer}
+Utskrift:
+
+```text
+Tallet er positivt
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -171,6 +179,14 @@ else:
 :::
 
 ::::{answer}
+Utskrift:
+
+```text
+Du kan stemme
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -197,6 +213,14 @@ else:
 :::
 
 ::::{answer}
+Utskrift:
+
+```text
+Tallet er partall
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -223,6 +247,14 @@ else:
 :::
 
 ::::{answer}
+Utskrift:
+
+```text
+Det er Python!
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -260,6 +292,14 @@ x = 50
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+Tallet er mindre enn 100
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -283,6 +323,14 @@ tekst = "Hello"
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+Teksten er kort
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -308,6 +356,14 @@ x = 7
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+Tallet er mellom 0 og 10
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:

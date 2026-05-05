@@ -132,7 +132,6 @@ else:
     print("x er ikke større enn 10")
 :::
 :::::::::::::
-
 :::::::::::::{tab-item} b
 Les programmet og prøv å forutsi hva som blir skrevet ut.
 
@@ -183,6 +182,14 @@ x = -5
 :::
 
 :::::{answer}
+Utskriften blir:
+
+:::{code-block} console
+Tallet er negativt
+:::
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -206,6 +213,14 @@ x = 10
 :::
 
 :::::{answer}
+Utskriften blir:
+
+:::{code-block} console
+Tallet er ikke-negativt
+:::
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -229,6 +244,14 @@ navn = "Alice"
 :::
 
 :::::{answer}
+Utskriften blir:
+
+:::{code-block} console
+Du er ikke Bob
+:::
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:

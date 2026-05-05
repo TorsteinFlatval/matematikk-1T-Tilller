@@ -1,73 +1,17 @@
 # Oppgaver
 
-## Oppgave 1
-Hva skriver programmet nedenfor ut?
-
-:::{interactive-code}
+:::::::::::::::{exercise} Oppgave 1
 ---
-predict:
+level: 1
 ---
-for x in range(3, 8):
-    print(x)
+Finn løsningene på følgende likninger ved å teste verdier:
 
-::::
-
-::::{answer}
-:::{code-block} console
-3
-4
-5
-6
-7
-:::
-::::
-
-::::{solution}
-For-løkken går gjennom tallene fra 3 til 7 (ikke inkludert 8).
-
-Utskriften blir:
-
-:::{code-block} console
-3
-4
-5
-6
-7
-:::
-::::
-
+::::::::::::::{tab-set}
 ---
-
-## Oppgave 2
-Skriv et program som tester om $x = 7$ er en løsning på likningen $4x - 5 = 23$.
-
-:::{interactive-code}
-# Skriv koden din her
-:::
-
-::::{answer}
-:::{code-block} console
-x = 7 er en løsning!
-:::
-::::
-
-::::{solution}
-Vi setter `x = 7` og sjekker om $4x - 5 = 23$:
-
-:::{code-block} python
-x = 7
-if 4*x - 5 == 23:
-    print("x =", x, "er en løsning!")
-:::
-
-Siden $4 \cdot 7 - 5 = 28 - 5 = 23$, er $x = 7$ en løsning.
-
-::::
-
+class: tabs-parts
 ---
-
-## Oppgave 3
-Finn løsningen på likningen $5x - 3 = 17$ ved å teste verdier fra 0 til 10.
+:::::::::::::{tab-item} a
+Løs likningen $3x + 2 = 14$ ved å teste verdier fra 0 til 10.
 
 :::{interactive-code}
 # Skriv koden din her
@@ -84,154 +28,21 @@ Vi bruker en for-løkke som tester verdier fra 0 til 10:
 
 :::{code-block} python
 for x in range(11):
-    if 5*x - 3 == 17:
+    if 3*x + 2 == 14:
         print("x =", x, "er en løsning!")
 :::
 
-Utskriften blir:
-
-:::{code-block} console
-x = 4 er en løsning!
-:::
-
-Løsningen er $x = 4$ fordi $5 \cdot 4 - 3 = 20 - 3 = 17$.
+Løsningen er $x = 4$ fordi $3 \cdot 4 + 2 = 12 + 2 = 14$.
 
 $$
 \mathcal{L} = \{4\}
 $$
-
 ::::
 
----
+:::::::::::::
 
-## Oppgave 4
-Finn alle løsninger på likningen $x^2 - 9 = 0$ ved å teste verdier fra -10 til 10.
-
-:::{interactive-code}
-# Skriv koden din her
-:::
-
-::::{answer}
-$$
-\mathcal{L} = \{-3, 3\}
-$$
-::::
-
-::::{solution}
-Vi bruker en for-løkke som tester verdier fra -10 til 10:
-
-:::{code-block} python
-for x in range(-10, 11):
-    if x**2 - 9 == 0:
-        print("x =", x, "er en løsning!")
-:::
-
-Utskriften blir:
-
-:::{code-block} console
-x = -3 er en løsning!
-x = 3 er en løsning!
-:::
-
-Løsningen av likningen er derfor:
-
-$$
-\mathcal{L} = \{-3, 3\}
-$$
-
-Vi kan sjekke: $(-3)^2 - 9 = 9 - 9 = 0$ ✓ og $3^2 - 9 = 9 - 9 = 0$ ✓
-
-::::
-
----
-
-## Oppgave 5
-Finn alle løsninger på likningen $x^2 + 2x - 8 = 0$ ved å teste verdier fra -10 til 10.
-
-:::{interactive-code}
-# Skriv koden din her
-:::
-
-::::{answer}
-$$
-\mathcal{L} = \{-4, 2\}
-$$
-::::
-
-::::{solution}
-Vi bruker en for-løkke som tester verdier fra -10 til 10:
-
-:::{code-block} python
-for x in range(-10, 11):
-    if x**2 + 2*x - 8 == 0:
-        print("x =", x, "er en løsning!")
-:::
-
-Utskriften blir:
-
-:::{code-block} console
-x = -4 er en løsning!
-x = 2 er en løsning!
-:::
-
-Løsningen av likningen er derfor:
-
-$$
-\mathcal{L} = \{-4, 2\}
-$$
-
-Vi kan sjekke:
-- For $x = -4$: $(-4)^2 + 2(-4) - 8 = 16 - 8 - 8 = 0$ ✓
-- For $x = 2$: $2^2 + 2(2) - 8 = 4 + 4 - 8 = 0$ ✓
-
-::::
-
----
-
-## Oppgave 6
-Finn alle løsninger på likningen $x^2 - 4x + 3 = 0$ og lagre dem i en liste.
-
-:::{interactive-code}
-# Skriv koden din her
-:::
-
-::::{answer}
-$$
-\mathcal{L} = \{1, 3\}
-$$
-::::
-
-::::{solution}
-Vi lager en tom liste og legger til løsninger vi finner:
-
-:::{code-block} python
-løsninger = []
-
-for x in range(-10, 11):
-    if x**2 - 4*x + 3 == 0:
-        løsninger.append(x)
-
-print("Løsningene er:", løsninger)
-:::
-
-Utskriften blir:
-
-:::{code-block} console
-Løsningene er: [1, 3]
-:::
-
-Løsningen av likningen er derfor:
-
-$$
-\mathcal{L} = \{1, 3\}
-$$
-
-::::
-
----
-
-## Oppgave 7
-Finn alle løsninger på likningen $2x^2 - 8 = 0$ ved å teste verdier fra -5 til 5.
+:::::::::::::{tab-item} b
+Løs likningen $x^2 - 4 = 0$ ved å teste verdier fra -5 til 5.
 
 :::{interactive-code}
 # Skriv koden din her
@@ -248,29 +59,21 @@ Vi bruker en for-løkke som tester verdier fra -5 til 5:
 
 :::{code-block} python
 for x in range(-5, 6):
-    if 2*x**2 - 8 == 0:
+    if x**2 - 4 == 0:
         print("x =", x, "er en løsning!")
 :::
 
-Utskriften blir:
-
-:::{code-block} console
-x = -2 er en løsning!
-x = 2 er en løsning!
-:::
-
-Løsningen av likningen er derfor:
+Løsningene er $x = -2$ og $x = 2$.
 
 $$
 \mathcal{L} = \{-2, 2\}
 $$
-
 ::::
 
----
+:::::::::::::
 
-## Oppgave 8
-Finn alle løsninger på likningen $x^3 - 8 = 0$ ved å teste verdier fra -5 til 5.
+:::::::::::::{tab-item} c
+Løs likningen $x^2 + 3x - 4 = 0$ ved å teste verdier fra -10 til 10.
 
 :::{interactive-code}
 # Skriv koden din her
@@ -278,18 +81,100 @@ Finn alle løsninger på likningen $x^3 - 8 = 0$ ved å teste verdier fra -5 til
 
 ::::{answer}
 $$
-\mathcal{L} = \{2\}
+\mathcal{L} = \{-4, 1\}
 $$
 ::::
 
 ::::{solution}
-Vi bruker en for-løkke som tester verdier fra -5 til 5:
+Vi bruker en for-løkke som tester verdier fra -10 til 10:
 
 :::{code-block} python
-for x in range(-5, 6):
-    if x**3 - 8 == 0:
+for x in range(-10, 11):
+    if x**2 + 3*x - 4 == 0:
         print("x =", x, "er en løsning!")
 :::
+
+Løsningene er $x = -4$ og $x = 1$.
+
+$$
+\mathcal{L} = \{-4, 1\}
+$$
+::::
+
+:::::::::::::
+
+::::::::::::::
+
+:::::::::::::::
+
+:::::::::::::::{exercise} Oppgave 2
+Definer funksjonen $f(x) = x^2 + 2x + 4$ og finn alle nullpunkt ved å teste verdier fra -10 til 10.
+
+:::{interactive-code}
+# Skriv koden din her
+:::
+
+::::{answer}
+Likningen har ingen heltallsløsninger.
+::::
+
+::::{solution}
+Vi definerer funksjonen og ser etter nullpunkt (der $f(x) = 0$):
+
+:::{code-block} python
+def f(x):
+    return x**2 + 2*x + 4
+
+for x in range(-10, 11):
+    if f(x) == 0:
+        print("x =", x, "er en løsning!")
+
+print("Ingen nullpunkt funnet blant heltallene.")
+:::
+
+Diskriminanten er: $\Delta = 2^2 - 4(1)(4) = 4 - 16 = -12 < 0$
+
+Siden diskriminanten er negativ, har funksjonen ingen reelle nullpunkt.
+
+::::
+
+:::::::::::::::
+
+
+:::::::::::::::{exercise} Oppgave 3
+Finn løsningene på likningen $2x^2 - 8 = 0$ ved å teste desimalverdier i steg på 0.01 fra -3 til 3.
+
+:::{interactive-code}
+# Skriv koden din her
+:::
+
+::::{answer}
+$$
+\mathcal{L} = \{-2, 2\}
+$$
+::::
+
+::::{solution}
+Vi bruker en `while`{l=python}-løkke som tester desimalverdier:
+
+:::{code-block} python
+x = -3
+while x <= 3:
+    løsning = 2*x**2 - 8
+    if -0.01 < løsning < 0.01:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01
+:::
+
+Løsningene er $x = -2$ og $x = 2$.
+
+$$
+\mathcal{L} = \{-2, 2\}
+$$
+
+::::
+
+:::::::::::::::
 
 Utskriften blir:
 
@@ -306,8 +191,6 @@ $$
 Fordi $2^3 = 8$.
 
 ::::
-
----
 
 ## Oppgave 9
 Finn alle løsninger på likningen $x^2 + 3x - 18 = 0$ og lagre dem i en liste.
@@ -348,8 +231,6 @@ $$
 $$
 
 ::::
-
----
 
 ## Oppgave 10
 Noen likninger har ingen heltallsløsninger. Hva blir utskriften av programmet nedenfor?

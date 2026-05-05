@@ -268,6 +268,23 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktig tall
 :::
 
 :::::{answer}
+Utskriften blir:
+
+:::{code-block} console
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+:::
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -290,6 +307,23 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktig tall
 
 
 :::::{answer}
+Utskriften blir:
+
+:::{code-block} console
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+:::
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -312,6 +346,18 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktig tall
 
 
 :::::{answer}
+Utskriften blir:
+
+:::{code-block} console
+10
+20
+30
+40
+50
+:::
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:

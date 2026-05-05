@@ -11,9 +11,17 @@ parts:
       sections:
       - file: book/programmering/for_løkker/oppgaver.md
         title: Oppgaver
+    - file: book/programmering/while_løkker/teori.md
+      sections:
+      - file: book/programmering/while_løkker/oppgaver.md
+        title: Oppgaver
     - file: book/programmering/if_setninger/teori.md
       sections:
       - file: book/programmering/if_setninger/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/funksjoner/teori.md
+      sections:
+      - file: book/programmering/funksjoner/oppgaver.md
         title: Oppgaver
     - file: book/programmering/likninger/teori.md
       sections:
