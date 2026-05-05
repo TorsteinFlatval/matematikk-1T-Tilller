@@ -353,6 +353,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../likningssystemer/oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/teori.html">Programmering av tallfølger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Likninger og ulikheter</span></p>
 <ul class="nav bd-sidenav">
@@ -551,7 +555,7 @@
 <p class="admonition-title">Eksempel 1</p>
 <p>Programmet nedenfor viser en enkel funksjon som skriver ut en hilsen.</p>
 
-        <div id="container-code-dc4eda1b"></div>
+        <div id="container-code-2bee760c"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -562,7 +566,7 @@ hils()
 hils()`;
 
                 makeInteractiveCode(
-                    "container-code-dc4eda1b",
+                    "container-code-2bee760c",
                     code,
                 );
             });
@@ -588,7 +592,7 @@ a</label><div class="sd-tab-content docutils">
 <p>Les programmet nedenfor og prøv å forutsi hva programmet skriver ut.</p>
 <p>Skriv inn gjetningen din nedenfor og sjekk svaret ditt!</p>
 
-        <div id="container-code-c94e06de"></div>
+        <div id="container-code-fb614e03"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -599,7 +603,7 @@ for i in range(3):
     si_hurra()`;
 
                 makePredictionInteractiveCode(
-                    "container-code-c94e06de",
+                    "container-code-fb614e03",
                     code,
                 );
             });
@@ -611,34 +615,43 @@ for i in range(3):
 <hr class="docutils" />
 <section id="funksjoner-med-parametere">
 <h2>Funksjoner med parametere<a class="headerlink" href="#funksjoner-med-parametere" title="Link to this heading">#</a></h2>
-<p>Ofte vil vi at funksjonen skal bruke noen verdier vi sender til den. Vi kaller disse verdiene for <strong>parametere</strong> eller <strong>argumenter</strong>.</p>
+<p>Ofte vil vi at funksjonen skal bruke noen verdier vi sender til den. Vi kaller disse verdiene for <strong>parametere</strong> eller <strong>argumenter</strong>. En parameter er variabelen du oppretter når du definerer en funksjon, mens et argument er den faktiske verdien du sender inn når du kaller funksjonen.</p>
 <div class="admonition example">
 <p class="admonition-title">Eksempel 2</p>
-<p>Programmet nedenfor viser en funksjon som tar imot et tall som parameter (argument) og regner ut arealet av et kvadrat.</p>
+<p>La oss definere to funksjoner og bruke en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å finne når de gir samme verdi.</p>
 
-        <div id="container-code-7d482643"></div>
+        <div id="container-code-f6e10d4f"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`def regn_ut_areal(side):
-    areal = side * side
-    print("Arealet er", areal)
+`def f(x):
+    return 2*x + 1
 
-regn_ut_areal(3)
-regn_ut_areal(5)`;
+def g(x):
+    return x + 5
+
+# Finn når f(x) = g(x)
+for x in range(10):
+    if f(x) == g(x):
+        print(f"f({x}) = g({x}) = {f(x)}")`;
 
                 makeInteractiveCode(
-                    "container-code-7d482643",
+                    "container-code-f6e10d4f",
                     code,
                 );
             });
         </script>
         <div class="admonition solution">
 <p class="admonition-title">Løsning</p>
-<p>Funksjonen <code class="code docutils literal highlight highlight-python"><span class="n">regn_ut_areal</span></code> tar imot variabelen <code class="code docutils literal highlight highlight-python"><span class="n">side</span></code>. Første gang kaller vi den med tallet <code class="docutils literal notranslate"><span class="pre">3</span></code>, og programmet hopper ned i funksjonen med <code class="docutils literal notranslate"><span class="pre">side</span> <span class="pre">=</span> <span class="pre">3</span></code>. Andre gang er <code class="docutils literal notranslate"><span class="pre">side</span> <span class="pre">=</span> <span class="pre">5</span></code>.</p>
+<p>Vi definerer to funksjoner:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">2x</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g(x)</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">5</span></code></p></li>
+</ul>
+<p>Deretter bruker vi en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å teste alle verdier fra 0 til 9. For hver <code class="docutils literal notranslate"><span class="pre">x</span></code> sjekker vi om <code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">==</span> <span class="pre">g(x)</span></code>.</p>
+<p>Kun når <span class="math notranslate nohighlight">\(x = 4\)</span> er de like: <span class="math notranslate nohighlight">\(f(4) = 2 \cdot 4 + 1 = 9\)</span> og <span class="math notranslate nohighlight">\(g(4) = 4 + 5 = 9\)</span>.</p>
 <p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Arealet er 9</span>
-<span class="go">Arealet er 25</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">f(4) = g(4) = 9</span>
 </pre></div>
 </div>
 </div>
@@ -664,7 +677,7 @@ regn_ut_areal(5)`;
 Hva skjer hvis du bytter ut <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">areal</span></code> med <code class="docutils literal notranslate"><span class="pre">print(areal)</span></code> inne i funksjonen?
 Når vi vil bruke svaret fra en funksjon videre (som å legge det sammen med noe annet), holder det ikke at funksjonen bare <em>printer</em> svaret. Funksjonen må <strong>returnere</strong> verdien til oss.</p>
 
-        <div id="container-code-59312134"></div>
+        <div id="container-code-c24d37a1"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -680,7 +693,7 @@ totalt_areal = areal1 + areal2
 print("Det totale arealet er", totalt_areal)`;
 
                 makeInteractiveCode(
-                    "container-code-59312134",
+                    "container-code-c24d37a1",
                     code,
                 );
             });
@@ -703,7 +716,7 @@ print("Det totale arealet er", totalt_areal)`;
 <p class="admonition-title">Eksempel 4</p>
 <p>La oss lage en lineær funksjon <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span> og en kvadratisk funksjon <span class="math notranslate nohighlight">\(g(x) = x^2 - 3\)</span>. Så finner vi noen funksjonsværdier.</p>
 
-        <div id="container-code-86356509"></div>
+        <div id="container-code-493f850b"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -722,7 +735,7 @@ print(f"f({x}) = {f_verdi}")
 print(f"g({x}) = {g_verdi}")`;
 
                 makeInteractiveCode(
-                    "container-code-86356509",
+                    "container-code-493f850b",
                     code,
                 );
             });
@@ -743,7 +756,7 @@ print(f"g({x}) = {g_verdi}")`;
 <p class="admonition-title">Underveisoppgave 1</p>
 <p>Hva skriver programmet ut?</p>
 
-        <div id="container-code-822f63d5"></div>
+        <div id="container-code-3854d476"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -753,7 +766,7 @@ print(f"g({x}) = {g_verdi}")`;
 print(f(5))`;
 
                 makeInteractiveCode(
-                    "container-code-822f63d5",
+                    "container-code-3854d476",
                     code,
                 );
             });
@@ -764,7 +777,7 @@ print(f(5))`;
 </pre></div>
 </div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-funksjoner-teori-244 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-funksjoner-teori-253 dropdown">
 <p class="admonition-title">Løsning</p>
 <p>Funksjonen <code class="code docutils literal highlight highlight-python"><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code> tar inn verdien <code class="docutils literal notranslate"><span class="pre">5</span></code> som <code class="docutils literal notranslate"><span class="pre">x</span></code> og regner ut <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">1</span></code>, som er 11. Dette returneres og blir deretter skrevet ut av <code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code>.</p>
 <p>Utskriften blir:</p>
@@ -779,14 +792,14 @@ print(f(5))`;
 <p>Lag en funksjon <code class="code docutils literal highlight highlight-python"><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code> som tilsvarer det matematiske uttrykket <span class="math notranslate nohighlight">\(g(x) = x^2 - 3\)</span>.
 Bruk funksjonen til å regne ut og skrive ut oppgitt svar for <span class="math notranslate nohighlight">\(g(4)\)</span>.</p>
 
-        <div id="container-code-af4d94d3"></div>
+        <div id="container-code-c8ce6989"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-af4d94d3",
+                    "container-code-c8ce6989",
                     code,
                 );
             });
@@ -798,7 +811,7 @@ Bruk funksjonen til å regne ut og skrive ut oppgitt svar for <span class="math 
 </pre></div>
 </div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-funksjoner-teori-274 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-funksjoner-teori-283 dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="linenos">2</span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span>
@@ -814,7 +827,7 @@ Bruk funksjonen til å regne ut og skrive ut oppgitt svar for <span class="math 
 <p>Ta quizen!</p>
 
         <!-- Container for the quiz -->
-        <div id="quiz-container-7d811d432828478586f97f7d0ccf950b" class="quiz-main-container"></div>
+        <div id="quiz-container-b21062b6d1c24bdd8eff726c5b7c9118" class="quiz-main-container"></div>
         <!-- Include KaTeX for LaTeX rendering -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
         <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
@@ -826,10 +839,56 @@ Bruk funksjonen til å regne ut og skrive ut oppgitt svar for <span class="math 
                 const questionsData = [{"content": "Løs oppgaven ved å velge det riktige alternativet: Hvilken kodelinje kaller funksjonen riktig? <pre><code class=\"python\">def min_funksjon(tall):\n    return tall * 2</code></pre>", "answers": [{"content": "`svar = min_funksjon(4)`", "isCorrect": true}, {"content": "`svar = min_funksjon[4]`", "isCorrect": false}, {"content": "`min_funksjon = 4`", "isCorrect": false}, {"content": "`def min_funksjon(4)`", "isCorrect": false}]}, {"content": "Hva er den viktigste forskjellen på `print` og `return`?", "answers": [{"content": "`return` sender et resultat tilbake til programmet slik at det kan lagres, mens `print` bare viser teksten på skjermen.", "isCorrect": true}, {"content": "De betyr akkurat det samme i Python.", "isCorrect": false}, {"content": "`return` kan bare brukes for tall, mens `print` bare er for tekstbeter.", "isCorrect": false}, {"content": "`print` avslutter funksjonen slik at den stopper.", "isCorrect": false}]}];
 
                 // Initialize the multiple-choice quiz
-                const quiz = new SequentialMultipleChoiceQuiz('quiz-container-7d811d432828478586f97f7d0ccf950b', questionsData);
+                const quiz = new SequentialMultipleChoiceQuiz('quiz-container-b21062b6d1c24bdd8eff726c5b7c9118', questionsData);
             });
         </script>
         </div>
+<hr class="docutils" />
+<div class="admonition example">
+<p class="admonition-title">Eksempel 5</p>
+<p>La oss kombinere funksjoner, <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker og <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger. Vi skal definere en funksjon som sjekker om et tall er partall eller oddetall, og deretter bruke en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å sjekke alle tall fra 1 til 10.</p>
+
+        <div id="container-code-c7963f70"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def par_eller_oddetall(n):
+    if n % 2 == 0:
+        return "partall"
+    else:
+        return "oddetall"
+
+print("Tall fra 1 til 10:")
+for tall in range(1, 11):
+    resultat = par_eller_oddetall(tall)
+    print(tall, "er" ,resultat)`;
+
+                makeInteractiveCode(
+                    "container-code-c7963f70",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition solution">
+<p class="admonition-title">Løsning</p>
+<p>Funksjonen <code class="code docutils literal highlight highlight-python"><span class="n">par_eller_oddetall</span><span class="p">(</span><span class="n">n</span><span class="p">)</span></code> bruker en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setning til å sjekke om <code class="docutils literal notranslate"><span class="pre">n</span></code> er delelig på 2. Hvis <code class="code docutils literal highlight highlight-python"><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span></code> (resten er 0), returnerer funksjonen “partall”, ellers returnerer den “oddetall”.</p>
+<p>Deretter bruker vi en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å kalle funksjonen for alle tall fra 1 til 10. Vi lagrer resultatet og skriver det ut med f-strengen.</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Tall fra 1 til 10:</span>
+<span class="go">1 er oddetall</span>
+<span class="go">2 er partall</span>
+<span class="go">3 er oddetall</span>
+<span class="go">4 er partall</span>
+<span class="go">5 er oddetall</span>
+<span class="go">6 er partall</span>
+<span class="go">7 er oddetall</span>
+<span class="go">8 er partall</span>
+<span class="go">9 er oddetall</span>
+<span class="go">10 er partall</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>

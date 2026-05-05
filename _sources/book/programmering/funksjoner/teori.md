@@ -90,18 +90,22 @@ for i in range(3):
 
 ## Funksjoner med parametere
 
-Ofte vil vi at funksjonen skal bruke noen verdier vi sender til den. Vi kaller disse verdiene for **parametere** eller **argumenter**.
+Ofte vil vi at funksjonen skal bruke noen verdier vi sender til den. Vi kaller disse verdiene for **parametere** eller **argumenter**. En parameter er variabelen du oppretter når du definerer en funksjon, mens et argument er den faktiske verdien du sender inn når du kaller funksjonen.
 
 :::::::::::::::{example} Eksempel 2
-Programmet nedenfor viser en funksjon som tar imot et tall som parameter (argument) og regner ut arealet av et kvadrat.
+La oss definere to funksjoner og bruke en `for`{l=python}-løkke til å finne når de gir samme verdi.
 
 :::{interactive-code}
-def regn_ut_areal(side):
-    areal = side * side
-    print("Arealet er", areal)
+def f(x):
+    return 2*x + 1
 
-regn_ut_areal(3)
-regn_ut_areal(5)
+def g(x):
+    return x + 5
+
+# Finn når f(x) = g(x)
+for x in range(10):
+    if f(x) == g(x):
+        print(f"f({x}) = g({x}) = {f(x)}")
 :::
 
 ::::{solution}
@@ -109,13 +113,18 @@ regn_ut_areal(5)
 dropdown: 0
 ---
 
-Funksjonen `regn_ut_areal`{l=python} tar imot variabelen `side`{l=python}. Første gang kaller vi den med tallet `3`, og programmet hopper ned i funksjonen med `side = 3`. Andre gang er `side = 5`.
+Vi definerer to funksjoner:
+- `f(x) = 2x + 1`
+- `g(x) = x + 5`
+
+Deretter bruker vi en `for`{l=python}-løkke til å teste alle verdier fra 0 til 9. For hver `x` sjekker vi om `f(x) == g(x)`.
+
+Kun når $x = 4$ er de like: $f(4) = 2 \cdot 4 + 1 = 9$ og $g(4) = 4 + 5 = 9$.
 
 Utskriften blir:
 
 :::{code-block} console
-Arealet er 9
-Arealet er 25
+f(4) = g(4) = 9
 :::
 
 ::::
@@ -305,4 +314,51 @@ Q: Hva er den viktigste forskjellen på `print` og `return`?
 - `print` avslutter funksjonen slik at den stopper.
 
 :::
+:::::::::::::::
+
+---
+
+:::::::::::::::{example} Eksempel 5
+La oss kombinere funksjoner, `for`{l=python}-løkker og `if`{l=python}-`else`{l=python}-setninger. Vi skal definere en funksjon som sjekker om et tall er partall eller oddetall, og deretter bruke en `for`{l=python}-løkke til å sjekke alle tall fra 1 til 10.
+
+:::{interactive-code}
+def par_eller_oddetall(n):
+    if n % 2 == 0:
+        return "partall"
+    else:
+        return "oddetall"
+
+print("Tall fra 1 til 10:")
+for tall in range(1, 11):
+    resultat = par_eller_oddetall(tall)
+    print(tall, "er" ,resultat)
+:::
+
+::::{solution}
+---
+dropdown: 0
+---
+
+Funksjonen `par_eller_oddetall(n)`{l=python} bruker en `if`{l=python}-`else`{l=python}-setning til å sjekke om `n` er delelig på 2. Hvis `n % 2 == 0`{l=python} (resten er 0), returnerer funksjonen "partall", ellers returnerer den "oddetall".
+
+Deretter bruker vi en `for`{l=python}-løkke til å kalle funksjonen for alle tall fra 1 til 10. Vi lagrer resultatet og skriver det ut med f-strengen.
+
+Utskriften blir:
+
+:::{code-block} console
+Tall fra 1 til 10:
+1 er oddetall
+2 er partall
+3 er oddetall
+4 er partall
+5 er oddetall
+6 er partall
+7 er oddetall
+8 er partall
+9 er oddetall
+10 er partall
+:::
+
+::::
+
 :::::::::::::::

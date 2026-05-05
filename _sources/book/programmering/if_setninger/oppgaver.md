@@ -376,6 +376,167 @@ else:
 :::
 :::::
 
+:::::::::::::::{exercise} Oppgave 5
+---
+level: 2
+---
+Alma og Synne snakker om en annen strategi for å skrive ut partall og oddetall. 
+
+:::{dialogue}
+---
+name1: Alma
+name2: Synne
+speaker1: left
+speaker2: right
+---
+Alma: Jeg har en annen idé for å skrive ut partallene på. Vi kan lage en løkke som går gjennom alle naturlige tall og sjekker om det er et partall.
+Synne: Det er en god idé! Da kan vi bruke en `if`{l=python}-setning for å sjekke om tallet er partall.
+Alma: Men hvordan sjekker vi at et tall er et partall igjen?
+Synne: Det er vel bare å sjekke om det er delelig med $2$? Jeg har lest at det kan man gjøre ved å skrive <br> `if n % 2 == 0:`{l=python}
+:::
+
+
+::::::::::::::{tab-set}
+---
+class: tabs-parts
+---
+:::::::::::::{tab-item} a
+Fyll ut programmet nedenfor slik at det skriver ut alle partallene til og med $20$ ved hjelp av en `if`{l=python}-setning.
+
+:::{interactive-code}
+for n in range(????): # FYLL INN: bytt ut ???? med riktige tall
+    if ????: # Sjekk om n er et partall
+        print(n)
+
+:::
+
+:::::::::::::
+
+
+:::::::::::::{tab-item} b
+Alma og Synne fortsetter samtalen.
+
+:::{dialogue}
+---
+name1: Alma
+name2: Synne
+speaker1: left
+speaker2: right
+---
+Alma: Ok, så nå klarer vi å skrive ut partall ved å sjekke om et tall er delelig med $2$. Men hva med oddetallene?
+Synne: Da har jeg lest at vi kan bruke en `if`{l=python}-`else`{l=python}-setning. Hvis tallet er delelig med $2$, så gjør vi ingenting. Da kan vi bruke `pass`{l=python}. Og så skriver vi ut tallet hvis det ikke er delelig med $2$.
+:::
+
+
+<br>
+
+Bruk strategien til Alma og Synne i programmet nedenfor.
+
+:::{interactive-code}
+for n in range(????): # FYLL INN: bytt ut ???? med riktige tall
+    if ????: # Sjekk om n er et partall
+        # FYLL INN: gjør ingenting her!
+    else:
+        # FYLL INN: skriv ut tallet hvis det er et oddetall
+
+:::
+
+:::::::::::::
+
+::::::::::::::
+
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 6
+---
+level: 2
+---
+Alma og Synne snakker om hvordan man kan avgjøre om et tall $p \in \mathbb{N}$ er et primtall med et program.
+
+
+:::{dialogue}
+---
+name1: Alma
+name2: Synne
+speaker1: left
+speaker2: right
+---
+Alma: Jeg har lest at et primtall er et tall som bare er delelig med $1$ og seg selv. 
+Synne: Ja, det stemmer! Så hvis vi skal sjekke om et tall $n$ er et primtall, så må vi sjekke om det er delelig med alle tallene fra $2$ til $p - 1$.
+Alma: Ja, men hvordan gjør vi det i et program?
+Synne: Vi kan bruke en løkke som går gjennom alle tallene $n \in \{2, 3, \ldots, p - 1\}$ og sjekker om $p$ er delelig med hvert av dem. Da kan vi vel bruke en `if`{l=python}-setning litt som når vi sjekket om et tall var delelig med $2$?
+:::
+
+
+::::::::::::::{tab-set}
+---
+class: tabs-parts
+---
+:::::::::::::{tab-item} a
+Bruk strategien til Alma og Synne i programmet nedenfor. Sjekk at tallene $11$, $51$ og $729$ er primtall.
+
+
+
+:::::::::::::
+
+
+:::::::::::::{tab-item} b
+Alma og Synne er ikke helt fornøyde.
+
+:::{dialogue}
+---
+name1: Alma
+name2: Synne
+speaker1: left
+speaker2: right
+---
+Alma: Men nå sjekker vi jo fryktelig mange tall. Trenger vi å sjekke alle tallene fra $2$ til $p - 1$?
+Synne: Nei! Vi trenger bare å sjekke tallene opp til $\sqrt{p}$. Hvis $p$ er delelig med et tall større enn $\sqrt{p}$, så må det også være delelig med et tall mindre enn $\sqrt{p}$. 
+Alma: Hvorfor er det slik? 
+Synne: Det er jeg ikke sikker på. Var bare noe jeg så på Insta. Men hvordan regner vi ut $\sqrt{p}$ i et program?
+Alma: Det er enkelt! Vi kan bruke `int(n ** 0.5)`{l=python}
+:::
+
+
+<br>
+
+Endre på programmet ditt og prøv ut strategien de snakker om.
+
+
+:::::::::::::
+
+
+:::::::::::::{tab-item} c
+Argumenter for at det største tallet man trenger å sjekke for å avgjøre om et tall $p$ er et primtall, er $\sqrt{p}$.
+
+:::::::::::::
+
+
+::::::::::::::
+
+:::{interactive-code}
+# Din kode her
+
+
+
+:::
+
+
+:::::::::::::::
+
+
+
+---
+
+
+
+
 :::::::::::::
 
 ::::::::::::::

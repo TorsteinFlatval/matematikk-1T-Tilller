@@ -150,6 +150,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}, "macros": {"annotateAbove": ["\\mathrel{\\overset{\\substack{\\text{#2} \\\\ \\Bigg\\downarrow}}{#1}}", 2], "annotateBelow": ["\\mathrel{\\underset{\\substack{\\Bigg\\uparrow \\\\ \\text{#2}}}{#1}}", 2], "cline": ["\\underline{\\phantom{#1}}", 1], "and": ["\\quad \\land \\quad"], "or": ["\\quad \\lor \\quad"], "liff": ["\\quad \\iff \\quad"], "limplies": ["\\quad \\implies \\quad"], "limpliedby": ["\\quad \\impliedby \\quad"], "lland": ["\\; \\land \\;"], "degree": ["^\\circ"], "qog": ["\\quad \\text{og} \\quad"], "qder": ["\\quad \\text{der} \\quad"], "qeller": ["\\quad \\text{eller} \\quad"], "qhvis": ["\\quad \\text{hvis} \\quad"], "qfor": ["\\quad \\text{for} \\quad"], "natural": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rational": ["\\mathbb{Q}"], "real": ["\\mathbb{R}"], "irrational": ["\\mathbb{Q}^c"], "qcomma": [",\\quad"], "nimplies": ["\\quad\\mathrel{\\not\\!\\!\\!\\implies}\\quad"], "nimpliedby": ["\\quad\\mathrel{\\not\\!\\!\\!\\impliedby}\\quad"], "niff": ["\\quad\\mathrel{\\not\\!\\!\\!\\iff}\\quad"], "cubica": ["\\raisebox{-0.4ex}{\\small\\(\\frown\\!\\smile\\)}", 0], "cubicb": ["\\raisebox{-0.4ex}{\\small\\(\\smile\\!\\frown\\)}", 0], "t": ["\\mathrm{#1}", 1], "dot": ["\\vec{#1} \\cdot \\vec{#2}", 2], "len": ["\\abs{\\vec{#1}}", 1], "lvec": ["\\overrightarrow{#1}", 1], "v": ["\\left[#1, #2\\right]", 2], "proj": ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2], "mstack": ["\\begin{array}{c}#1\\end{array}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/programmering/if_setninger/teori';</script>
     <script>mermaid.initialize({"startOnLoad": true})</script>
@@ -349,6 +351,10 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../likningssystemer/teori.html">Likningssystemer med programmering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../likningssystemer/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/teori.html">Programmering av tallfølger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
 </ul>
@@ -564,8 +570,8 @@
 </tr>
 <tr class="row-odd"><td><p><code class="code docutils literal highlight highlight-python"><span class="o">&gt;</span></code></p></td>
 <td><p>Større enn</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">3</span></code></p></td>
-<td><p><code class="code docutils literal highlight highlight-python"><span class="kc">True</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&lt;</span> <span class="pre">3</span></code></p></td>
+<td><p><code class="code docutils literal highlight highlight-python"><span class="kc">False</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="code docutils literal highlight highlight-python"><span class="o">&lt;=</span></code></p></td>
 <td><p>Mindre enn eller lik</p></td>
@@ -602,7 +608,7 @@
 a</label><div class="sd-tab-content docutils">
 <p>Les programmet og prøv å forutsi hva som blir skrevet ut.</p>
 
-        <div id="container-code-05f890f7"></div>
+        <div id="container-code-94f0bf3b"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -611,7 +617,7 @@ if x > 5:
     print("x er større enn 5")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-05f890f7",
+                    "container-code-94f0bf3b",
                     code,
                 );
             });
@@ -622,7 +628,7 @@ if x > 5:
 b</label><div class="sd-tab-content docutils">
 <p>Les programmet og prøv å forutsi hva som blir skrevet ut.</p>
 
-        <div id="container-code-7e390b4a"></div>
+        <div id="container-code-9625db68"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -631,7 +637,7 @@ if x > 5:
     print("x er større enn 5")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-7e390b4a",
+                    "container-code-9625db68",
                     code,
                 );
             });
@@ -642,7 +648,7 @@ if x > 5:
 c</label><div class="sd-tab-content docutils">
 <p>Les programmet og prøv å forutsi hva som blir skrevet ut.</p>
 
-        <div id="container-code-3d57c6ff"></div>
+        <div id="container-code-7b78f6a3"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -651,7 +657,7 @@ if navn == "Anne":
     print("Hallo Anne!")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-3d57c6ff",
+                    "container-code-7b78f6a3",
                     code,
                 );
             });
@@ -681,7 +687,7 @@ if navn == "Anne":
 a</label><div class="sd-tab-content docutils">
 <p>Les programmet og prøv å forutsi hva som blir skrevet ut.</p>
 
-        <div id="container-code-c8b04008"></div>
+        <div id="container-code-7f3f0d0e"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -692,7 +698,7 @@ else:
     print("x er ikke større enn 10")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-c8b04008",
+                    "container-code-7f3f0d0e",
                     code,
                 );
             });
@@ -703,7 +709,7 @@ else:
 b</label><div class="sd-tab-content docutils">
 <p>Les programmet og prøv å forutsi hva som blir skrevet ut.</p>
 
-        <div id="container-code-b1c4a95d"></div>
+        <div id="container-code-382574b8"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -714,7 +720,7 @@ else:
     print("Du er ikke myndig")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-b1c4a95d",
+                    "container-code-382574b8",
                     code,
                 );
             });
@@ -725,7 +731,7 @@ else:
 c</label><div class="sd-tab-content docutils">
 <p>Les programmet og prøv å forutsi hva som blir skrevet ut.</p>
 
-        <div id="container-code-a417ccd1"></div>
+        <div id="container-code-8b49e568"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -736,7 +742,7 @@ else:
     print("Tallet er oddetall")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-a417ccd1",
+                    "container-code-8b49e568",
                     code,
                 );
             });
@@ -755,7 +761,7 @@ else:
 a</label><div class="sd-tab-content docutils">
 <p>Lag et program som sjekker om et tall <code class="docutils literal notranslate"><span class="pre">x</span></code> er negativt. Dersom det er negativt, skal programmet skrive ut “Tallet er negativt”. Ellers skal det skrive ut “Tallet er ikke negativt”.</p>
 
-        <div id="container-code-da854e24"></div>
+        <div id="container-code-b4925e59"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -763,7 +769,7 @@ a</label><div class="sd-tab-content docutils">
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-da854e24",
+                    "container-code-b4925e59",
                     code,
                 );
             });
@@ -791,7 +797,7 @@ a</label><div class="sd-tab-content docutils">
 b</label><div class="sd-tab-content docutils">
 <p>Lag et program som sjekker om et tall <code class="docutils literal notranslate"><span class="pre">x</span></code> er større enn eller lik 0. Dersom det er det, skal programmet skrive ut “Tallet er ikke-negativt”. Ellers skal det skrive ut “Tallet er negativt”.</p>
 
-        <div id="container-code-220d423b"></div>
+        <div id="container-code-f12699f5"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -799,7 +805,7 @@ b</label><div class="sd-tab-content docutils">
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-220d423b",
+                    "container-code-f12699f5",
                     code,
                 );
             });
@@ -827,7 +833,7 @@ b</label><div class="sd-tab-content docutils">
 c</label><div class="sd-tab-content docutils">
 <p>Lag et program som sjekker om en variabel <code class="docutils literal notranslate"><span class="pre">navn</span></code> er lik “Bob”. Dersom den er det, skal programmet skrive ut “Hallo Bob!”. Ellers skal det skrive ut “Du er ikke Bob”.</p>
 
-        <div id="container-code-a5e99df8"></div>
+        <div id="container-code-61abf5a2"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -835,7 +841,7 @@ c</label><div class="sd-tab-content docutils">
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-a5e99df8",
+                    "container-code-61abf5a2",
                     code,
                 );
             });

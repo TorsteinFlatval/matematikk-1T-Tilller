@@ -193,7 +193,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Oppgaver" href="oppgaver.html" />
+    <link rel="next" title="Oppgaver: Likningssystemer med programmering" href="oppgaver.html" />
     <link rel="prev" title="Oppgaver" href="../likninger/oppgaver.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -353,6 +353,10 @@
 <li class="toctree-l2"><a class="reference internal" href="oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/teori.html">Programmering av tallfølger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Likninger og ulikheter</span></p>
 <ul class="nav bd-sidenav">
@@ -509,7 +513,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nestede-for-lokker">Nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nostede-for-lokker">Nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sjekke-flere-betingelser-samtidig">Sjekke flere betingelser samtidig</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lose-likningssystemer">Løse likningssystemer</a></li>
 </ul>
@@ -528,18 +532,18 @@
 <div class="tip admonition">
 <p class="admonition-title">Læringsmål</p>
 <ul class="simple">
-<li><p>Forstå hvordan nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker fungerer</p></li>
+<li><p>Forstå hvordan nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker fungerer</p></li>
 <li><p>Kunne bruke programmering til å løse likningssystemer med to ukjente</p></li>
 <li><p>Kunne bruke <code class="code docutils literal highlight highlight-python"><span class="ow">and</span></code> for å sjekke flere betingelser samtidig</p></li>
 <li><p>Kunne systematisk finne alle heltallsløsninger i et likningssystem</p></li>
 </ul>
 </div>
 <p>Et likningssystem har ofte to ukjente, <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>. I programmering kan vi løse slike systemer ved å teste alle mulige par <span class="math notranslate nohighlight">\((x, y)\)</span> i et område og sjekke hvilke som oppfyller begge likningene samtidig.</p>
-<section id="nestede-for-lokker">
-<h2>Nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker<a class="headerlink" href="#nestede-for-lokker" title="Link to this heading">#</a></h2>
+<section id="nostede-for-lokker">
+<h2>Nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker<a class="headerlink" href="#nostede-for-lokker" title="Link to this heading">#</a></h2>
 <p>For å teste alle par <span class="math notranslate nohighlight">\((x, y)\)</span> bruker vi to <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker: en for <span class="math notranslate nohighlight">\(x\)</span> og en for <span class="math notranslate nohighlight">\(y\)</span>. Den ene løkken nøstes (plasseres) inne i den andre.</p>
 <div class="admonition summary">
-<p class="admonition-title">Nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</p>
+<p class="admonition-title">Nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</p>
 <p>For å teste alle par <span class="math notranslate nohighlight">\((x, y)\)</span> bruker vi to <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">slutt</span><span class="p">):</span>
 <span class="linenos">2</span>    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">slutt</span><span class="p">):</span>
@@ -550,14 +554,14 @@
 </div>
 <div class="admonition explore">
 <p class="admonition-title">Utforsk 1</p>
-<p>La oss utforske hvordan nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker fungerer.</p>
+<p>La oss utforske hvordan nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker fungerer.</p>
 <div class="sd-tab-set tabs-parts docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 a</label><div class="sd-tab-content docutils">
 <p>Hva tror du programmet skriver ut?</p>
 
-        <div id="container-code-41828988"></div>
+        <div id="container-code-dadc5273"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -566,7 +570,7 @@ a</label><div class="sd-tab-content docutils">
         print((x, y))`;
 
                 makePredictionInteractiveCode(
-                    "container-code-41828988",
+                    "container-code-dadc5273",
                     code,
                 );
             });
@@ -577,7 +581,7 @@ a</label><div class="sd-tab-content docutils">
 b</label><div class="sd-tab-content docutils">
 <p>Hva tror du programmet skriver ut?</p>
 
-        <div id="container-code-1a6d7727"></div>
+        <div id="container-code-e37e8598"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -586,7 +590,7 @@ b</label><div class="sd-tab-content docutils">
         print((x, y))`;
 
                 makePredictionInteractiveCode(
-                    "container-code-1a6d7727",
+                    "container-code-e37e8598",
                     code,
                 );
             });
@@ -597,7 +601,7 @@ b</label><div class="sd-tab-content docutils">
 c</label><div class="sd-tab-content docutils">
 <p>Hva tror du programmet skriver ut?</p>
 
-        <div id="container-code-a00fa690"></div>
+        <div id="container-code-da06fb31"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -606,7 +610,7 @@ c</label><div class="sd-tab-content docutils">
         print((x, y))`;
 
                 makePredictionInteractiveCode(
-                    "container-code-a00fa690",
+                    "container-code-da06fb31",
                     code,
                 );
             });
@@ -637,7 +641,7 @@ c</label><div class="sd-tab-content docutils">
 a</label><div class="sd-tab-content docutils">
 <p>Hva tror du programmet skriver ut når vi tester <span class="math notranslate nohighlight">\((x, y) = (3, 2)\)</span> mot systemet <span class="math notranslate nohighlight">\(x + y = 5\)</span> og <span class="math notranslate nohighlight">\(x - y = 1\)</span>?</p>
 
-        <div id="container-code-5375c060"></div>
+        <div id="container-code-2fb14327"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -647,7 +651,7 @@ if x + y == 5 and x - y == 1:
     print("(", x, ",", y, ") er en løsning!")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-5375c060",
+                    "container-code-2fb14327",
                     code,
                 );
             });
@@ -658,7 +662,7 @@ if x + y == 5 and x - y == 1:
 b</label><div class="sd-tab-content docutils">
 <p>Hva tror du programmet skriver ut når vi tester <span class="math notranslate nohighlight">\((x, y) = (2, 2)\)</span> mot systemet <span class="math notranslate nohighlight">\(x + y = 5\)</span> og <span class="math notranslate nohighlight">\(x - y = 1\)</span>?</p>
 
-        <div id="container-code-e66fee52"></div>
+        <div id="container-code-559ce1bf"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -668,7 +672,7 @@ if x + y == 5 and x - y == 1:
     print("(", x, ",", y, ") er en løsning!")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-e66fee52",
+                    "container-code-559ce1bf",
                     code,
                 );
             });
@@ -679,7 +683,7 @@ if x + y == 5 and x - y == 1:
 c</label><div class="sd-tab-content docutils">
 <p>Hva tror du programmet skriver ut når vi tester <span class="math notranslate nohighlight">\((x, y) = (4, 2)\)</span> mot systemet <span class="math notranslate nohighlight">\(x + y = 5\)</span> og <span class="math notranslate nohighlight">\(x - y = 1\)</span>?</p>
 
-        <div id="container-code-0e2f3650"></div>
+        <div id="container-code-a7f7d5b2"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -689,7 +693,7 @@ if x + y == 5 and x - y == 1:
     print("(", x, ",", y, ") er en løsning!")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-0e2f3650",
+                    "container-code-a7f7d5b2",
                     code,
                 );
             });
@@ -701,7 +705,7 @@ if x + y == 5 and x - y == 1:
 <hr class="docutils" />
 <section id="lose-likningssystemer">
 <h2>Løse likningssystemer<a class="headerlink" href="#lose-likningssystemer" title="Link to this heading">#</a></h2>
-<p>Nå kombinerer vi nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker og <code class="code docutils literal highlight highlight-python"><span class="ow">and</span></code> for å finne alle løsninger på et likningssystem.</p>
+<p>Nå kombinerer vi nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker og <code class="code docutils literal highlight highlight-python"><span class="ow">and</span></code> for å finne alle løsninger på et likningssystem.</p>
 <div class="admonition summary">
 <p class="admonition-title">Slik løser vi likningssystemer</p>
 <p>For å finne løsninger på et likningssystem tester vi alle par <span class="math notranslate nohighlight">\((x, y)\)</span> i et område:</p>
@@ -723,7 +727,7 @@ x - y &amp;= 1
 \end{align}\end{split}\]</div>
 <p>ved å teste alle heltallsverdier fra -10 til 10.</p>
 
-        <div id="container-code-95db41b4"></div>
+        <div id="container-code-d07cab81"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -733,7 +737,7 @@ x - y &amp;= 1
             print((x, y))`;
 
                 makeInteractiveCode(
-                    "container-code-95db41b4",
+                    "container-code-d07cab81",
                     code,
                 );
             });
@@ -766,7 +770,7 @@ x - y &amp;= -1
 \end{align}\end{split}\]</div>
 <p>ved å teste alle heltallsverdier fra -10 til 10.</p>
 
-        <div id="container-code-65a5beca"></div>
+        <div id="container-code-025bfa71"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -776,7 +780,7 @@ x - y &amp;= -1
             print((x, y))`;
 
                 makeInteractiveCode(
-                    "container-code-65a5beca",
+                    "container-code-025bfa71",
                     code,
                 );
             });
@@ -800,23 +804,61 @@ x - y &amp;= -1
 </div>
 </div>
 <hr class="docutils" />
-<div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 1</p>
-<p>Løs likningssystemet ved å teste verdier fra -10 til 10:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align}
-x + 2y &amp;= 4 \\
-x - y &amp;= 1
-\end{align}\end{split}\]</div>
+<div class="admonition example">
+<p class="admonition-title">Eksempel 3</p>
+<p>Noen ganger ønsker vi å finne når to funksjoner har samme verdi, altså når <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span>.</p>
+<p>La <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> og <span class="math notranslate nohighlight">\(g(x) = 2x\)</span>. Finn alle heltallsløsninger der <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> ved å teste verdier fra -5 til 5.</p>
 
-        <div id="container-code-30b5d22f"></div>
+        <div id="container-code-cd288896"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv koden din her`;
+`def f(x):
+    return x**2
+
+def g(x):
+    return 2*x
+
+for x in range(-5, 6):
+    if f(x) == g(x):
+        print(f"x = {x}: f({x}) = g({x}) = {f(x)}")`;
 
                 makeInteractiveCode(
-                    "container-code-30b5d22f",
+                    "container-code-cd288896",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition solution">
+<p class="admonition-title">Løsning</p>
+<p>Vi definerer de to funksjonene og tester hver <span class="math notranslate nohighlight">\(x\)</span>-verdi. Når <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> oppfyller at:</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(x = 0\)</span>: <span class="math notranslate nohighlight">\(f(0) = 0^2 = 0\)</span> og <span class="math notranslate nohighlight">\(g(0) = 2 \cdot 0 = 0\)</span> ✓</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(x = 2\)</span>: <span class="math notranslate nohighlight">\(f(2) = 2^2 = 4\)</span> og <span class="math notranslate nohighlight">\(g(2) = 2 \cdot 2 = 4\)</span> ✓</p></li>
+</ul>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 0: f(0) = g(0) = 0</span>
+<span class="go">x = 2: f(2) = g(2) = 4</span>
+</pre></div>
+</div>
+<p>Løsningene er <span class="math notranslate nohighlight">\(x = 0\)</span> og <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \{0, 2\}\]</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition exercise">
+<p class="admonition-title">Underveisoppgave 1</p>
+<p>Definer funksjonene <span class="math notranslate nohighlight">\(f(x) = x\)</span> og <span class="math notranslate nohighlight">\(g(x) = 2x - 1\)</span>, og finn hvor de har samme verdi ved å teste verdier fra -10 til 10.</p>
+
+        <div id="container-code-0d88c198"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Definer funksjonene og finn løsningen`;
+
+                makeInteractiveCode(
+                    "container-code-0d88c198",
                     code,
                 );
             });
@@ -824,29 +866,33 @@ x - y &amp;= 1
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <div class="math notranslate nohighlight">
-\[\mathcal{L} = \{(2, 1)\}\]</div>
+\[\mathcal{L} = \{1\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-teori-285 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-teori-324 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi tester alle par og skriver ut dem som passer:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<p>Vi definerer de to funksjonene og tester hvor <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = g(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Paret <span class="math notranslate nohighlight">\((2, 1)\)</span> oppfyller begge likningene:</p>
+<p>Løsningen er <span class="math notranslate nohighlight">\(x = 1\)</span> fordi:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(2 + 2 \cdot 1 = 4\)</span> ✓</p></li>
-<li><p><span class="math notranslate nohighlight">\(2 - 1 = 1\)</span> ✓</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(1) = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(1) = 2(1) - 1 = 1\)</span></p></li>
 </ul>
 <p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(2, 1)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 1: f(1) = g(1) = 1</span>
 </pre></div>
 </div>
-<p>Løsningen er:</p>
 <div class="math notranslate nohighlight">
-\[\mathcal{L} = \{(2, 1)\}\]</div>
+\[\mathcal{L} = \{1\}\]</div>
 </div>
 </div>
 <hr class="docutils" />
@@ -859,14 +905,14 @@ x + y &amp;= 2 \\
 x - y &amp;= 6
 \end{align}\end{split}\]</div>
 
-        <div id="container-code-2552f67a"></div>
+        <div id="container-code-8c005f76"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-2552f67a",
+                    "container-code-8c005f76",
                     code,
                 );
             });
@@ -876,9 +922,9 @@ x - y &amp;= 6
 <div class="math notranslate nohighlight">
 \[\mathcal{L} = \{(4, -2)\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-teori-331 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-teori-373 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi bruker nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker:</p>
+<p>Vi bruker nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
@@ -904,14 +950,14 @@ x^2 + y &amp;= 9 \\
 x + y &amp;= 3
 \end{align}\end{split}\]</div>
 
-        <div id="container-code-22298d41"></div>
+        <div id="container-code-364cd8b0"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-22298d41",
+                    "container-code-364cd8b0",
                     code,
                 );
             });
@@ -921,7 +967,7 @@ x + y &amp;= 3
 <div class="math notranslate nohighlight">
 \[\mathcal{L} = \{(2, 1), (-3, 6)\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-teori-373 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-teori-415 dropdown">
 <p class="admonition-title">Løsning</p>
 <p>Vi tester begge likningene samtidig:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
@@ -990,7 +1036,7 @@ x + y &amp;= 3
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Oppgaver</p>
+        <p class="prev-next-title">Oppgaver: Likningssystemer med programmering</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1012,7 +1058,7 @@ x + y &amp;= 3
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nestede-for-lokker">Nestede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nostede-for-lokker">Nøstede <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sjekke-flere-betingelser-samtidig">Sjekke flere betingelser samtidig</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lose-likningssystemer">Løse likningssystemer</a></li>
 </ul>

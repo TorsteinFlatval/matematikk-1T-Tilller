@@ -4,7 +4,7 @@
 ---
 class: tip
 ---
-* Forstå hvordan nestede `for`{l=python}-løkker fungerer
+* Forstå hvordan nøstede `for`{l=python}-løkker fungerer
 * Kunne bruke programmering til å løse likningssystemer med to ukjente
 * Kunne bruke `and`{l=python} for å sjekke flere betingelser samtidig
 * Kunne systematisk finne alle heltallsløsninger i et likningssystem
@@ -12,11 +12,11 @@ class: tip
 
 Et likningssystem har ofte to ukjente, $x$ og $y$. I programmering kan vi løse slike systemer ved å teste alle mulige par $(x, y)$ i et område og sjekke hvilke som oppfyller begge likningene samtidig.
 
-## Nestede `for`{l=python}-løkker
+## Nøstede `for`{l=python}-løkker
 
 For å teste alle par $(x, y)$ bruker vi to `for`{l=python}-løkker: en for $x$ og en for $y$. Den ene løkken nøstes (plasseres) inne i den andre.
 
-:::::::::::::::{summary} Nestede `for`{l=python}-løkker
+:::::::::::::::{summary} Nøstede `for`{l=python}-løkker
 For å teste alle par $(x, y)$ bruker vi to `for`{l=python}-løkker:
 
 :::{code-block} python
@@ -32,7 +32,7 @@ Den ytre løkken itererer over $x$, og for hver $x$ itererer den indre løkken o
 :::::::::::::::
 
 :::::::::::::::{explore} Utforsk 1
-La oss utforske hvordan nestede `for`{l=python}-løkker fungerer.
+La oss utforske hvordan nøstede `for`{l=python}-løkker fungerer.
 
 ::::::::::::::{tab-set}
 ---
@@ -158,7 +158,7 @@ if x + y == 5 and x - y == 1:
 
 ## Løse likningssystemer
 
-Nå kombinerer vi nestede `for`{l=python}-løkker og `and`{l=python} for å finne alle løsninger på et likningssystem.
+Nå kombinerer vi nøstede `for`{l=python}-løkker og `and`{l=python} for å finne alle løsninger på et likningssystem.
 
 :::::::::::::::{summary} Slik løser vi likningssystemer
 For å finne løsninger på et likningssystem tester vi alle par $(x, y)$ i et område:
@@ -266,45 +266,87 @@ $$\mathcal{L} = \{(2, 3)\}$$
 
 ---
 
-:::::::::::::::{exercise} Underveisoppgave 1
-Løs likningssystemet ved å teste verdier fra -10 til 10:
+:::::::::::::::{example} Eksempel 3
+Noen ganger ønsker vi å finne når to funksjoner har samme verdi, altså når $f(x) = g(x)$.
 
-$$\begin{align}
-x + 2y &= 4 \\
-x - y &= 1
-\end{align}$$
+La $f(x) = x^2$ og $g(x) = 2x$. Finn alle heltallsløsninger der $f(x) = g(x)$ ved å teste verdier fra -5 til 5.
 
 :::{interactive-code}
-# Skriv koden din her
-:::
+def f(x):
+    return x**2
 
-::::{answer}
-$$\mathcal{L} = \{(2, 1)\}$$
-::::
+def g(x):
+    return 2*x
+
+for x in range(-5, 6):
+    if f(x) == g(x):
+        print(f"x = {x}: f({x}) = g({x}) = {f(x)}")
+:::
 
 ::::{solution}
-Vi tester alle par og skriver ut dem som passer:
+---
+dropdown: 0
+---
 
-:::{code-block} python
-for x in range(-10, 11):
-    for y in range(-10, 11):
-        if x + 2*y == 4 and x - y == 1:
-            print((x, y))
-:::
+Vi definerer de to funksjonene og tester hver $x$-verdi. Når $f(x) = g(x)$ oppfyller at:
 
-Paret $(2, 1)$ oppfyller begge likningene:
-- $2 + 2 \cdot 1 = 4$ ✓
-- $2 - 1 = 1$ ✓
+- For $x = 0$: $f(0) = 0^2 = 0$ og $g(0) = 2 \cdot 0 = 0$ ✓
+- For $x = 2$: $f(2) = 2^2 = 4$ og $g(2) = 2 \cdot 2 = 4$ ✓
 
 Utskriften blir:
 
 :::{code-block} console
-(2, 1)
+x = 0: f(0) = g(0) = 0
+x = 2: f(2) = g(2) = 4
 :::
 
-Løsningen er:
+Løsningene er $x = 0$ og $x = 2$.
 
-$$\mathcal{L} = \{(2, 1)\}$$
+$$\mathcal{L} = \{0, 2\}$$
+
+::::
+
+:::::::::::::::
+
+---
+
+:::::::::::::::{exercise} Underveisoppgave 1
+Definer funksjonene $f(x) = x$ og $g(x) = 2x - 1$, og finn hvor de har samme verdi ved å teste verdier fra -10 til 10.
+
+:::{interactive-code}
+# Definer funksjonene og finn løsningen
+:::
+
+::::{answer}
+$$\mathcal{L} = \{1\}$$
+::::
+
+::::{solution}
+Vi definerer de to funksjonene og tester hvor $f(x) = g(x)$:
+
+:::{code-block} python
+def f(x):
+    return x
+
+def g(x):
+    return 2*x - 1
+
+for x in range(-10, 11):
+    if f(x) == g(x):
+        print(f"x = {x}: f({x}) = g({x}) = {f(x)}")
+:::
+
+Løsningen er $x = 1$ fordi:
+- $f(1) = 1$
+- $g(1) = 2(1) - 1 = 1$
+
+Utskriften blir:
+
+:::{code-block} console
+x = 1: f(1) = g(1) = 1
+:::
+
+$$\mathcal{L} = \{1\}$$
 
 ::::
 
@@ -329,7 +371,7 @@ $$\mathcal{L} = \{(4, -2)\}$$
 ::::
 
 ::::{solution}
-Vi bruker nestede `for`{l=python}-løkker:
+Vi bruker nøstede `for`{l=python}-løkker:
 
 :::{code-block} python
 for x in range(-10, 11):

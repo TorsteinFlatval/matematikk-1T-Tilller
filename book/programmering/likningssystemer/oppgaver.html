@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Oppgaver &#8212; Matematikk 1T</title>
+    <title>Oppgaver: Likningssystemer med programmering &#8212; Matematikk 1T</title>
   
   
   
@@ -193,7 +193,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Likningssystemer" href="../../likninger_og_ulikheter/likningssystemer/teori.html" />
+    <link rel="next" title="Programmering av tallfølger" href="../tallf%C3%B8lger_og_figurtall/teori.html" />
     <link rel="prev" title="Likningssystemer med programmering" href="teori.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -353,6 +353,10 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Oppgaver</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/teori.html">Programmering av tallfølger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tallf%C3%B8lger_og_figurtall/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Likninger og ulikheter</span></p>
 <ul class="nav bd-sidenav">
@@ -486,9 +490,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -499,22 +501,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Oppgaver</h1>
+    <h1>Oppgaver: Likningssystemer med programmering</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Innhold </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-1">Oppgave 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-2">Oppgave 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-3">Oppgave 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-4">Oppgave 4</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -524,25 +515,67 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="oppgaver">
-<h1>Oppgaver<a class="headerlink" href="#oppgaver" title="Link to this heading">#</a></h1>
-<section id="oppgave-1">
-<h2>Oppgave 1<a class="headerlink" href="#oppgave-1" title="Link to this heading">#</a></h2>
-<p>Bruk to for-løkker til å finne alle heltallsløsninger i intervallet [-10, 10] for systemet</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    x + y &amp;= 2 \\
-    x - y &amp;= 6
-\end{align*}\]</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="oppgaver-likningssystemer-med-programmering">
+<h1>Oppgaver: Likningssystemer med programmering<a class="headerlink" href="#oppgaver-likningssystemer-med-programmering" title="Link to this heading">#</a></h1>
+<div class="admonition exercise">
+<p class="admonition-title">Oppgave 1</p>
+<p>Fyll inn koden slik at programmet finner løsningen på likningssystemet <span class="math notranslate nohighlight">\(x + y = 5\)</span> og <span class="math notranslate nohighlight">\(x - y = 1\)</span>.</p>
 
-        <div id="container-code-67bff484"></div>
+        <div id="container-code-76c2b58c"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`for x in range(-10, 11):
+    for y in range(-10, 11):
+        if ?????? and ??????:
+            print((x, y))`;
+
+                makeInteractiveCode(
+                    "container-code-76c2b58c",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(3, 2)
+</pre></div>
+</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-25 dropdown">
+<p class="admonition-title">Løsning</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Løsningen er <span class="math notranslate nohighlight">\((x, y) = (3, 2)\)</span>.</p>
+</div>
+</div>
+<div class="admonition exercise">
+<p class="admonition-title">Oppgave 2</p>
+<p>Løs følgende likningssystemer ved å teste alle heltallsverdier:</p>
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+a</label><div class="sd-tab-content docutils">
+<p>Finn alle heltallsløsninger i intervallet [-10, 10] for systemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+x + y &amp;= 2 \\
+x - y &amp;= 6
+\end{align}\end{split}\]</div>
+
+        <div id="container-code-03e8e140"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-67bff484",
+                    "container-code-03e8e140",
                     code,
                 );
             });
@@ -550,48 +583,37 @@
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(4, -2)\}
-\]</div>
+\[\mathcal{L} = \{(4, -2)\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-21 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-66 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi tester alle punkt i intervallet og skriver ut løsningene:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(4, -2)</span>
-</pre></div>
+<p>Løsningen er <span class="math notranslate nohighlight">\((4, -2)\)</span>.</p>
 </div>
-<p>Dermed er løsningen</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+b</label><div class="sd-tab-content docutils">
+<p>Finn alle heltallsløsninger i intervallet [-10, 10] for systemet:</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(4, -2)\}
-\]</div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="oppgave-2">
-<h2>Oppgave 2<a class="headerlink" href="#oppgave-2" title="Link to this heading">#</a></h2>
-<p>Finn alle heltallsløsninger i intervallet [-10, 10] for systemet</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    x^2 + y &amp;= 9 \\
-    x + y &amp;= 3
-\end{align*}\]</div>
+\[\begin{split}\begin{align}
+x^2 + y &amp;= 9 \\
+x + y &amp;= 3
+\end{align}\end{split}\]</div>
 
-        <div id="container-code-38db7f85"></div>
+        <div id="container-code-73c2b236"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-38db7f85",
+                    "container-code-73c2b236",
                     code,
                 );
             });
@@ -599,49 +621,37 @@
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(2, 1), (-3, 6)\}
-\]</div>
+\[\mathcal{L} = \{(2, 1), (-3, 6)\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-65 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-94 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi bruker to for-løkker og tester begge likningene samtidig:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(2, 1)</span>
-<span class="gp gp-VirtualEnv">(-3, 6)</span>
-</pre></div>
+<p>Løsningene er <span class="math notranslate nohighlight">\((2, 1)\)</span> og <span class="math notranslate nohighlight">\((-3, 6)\)</span>.</p>
 </div>
-<p>Dermed er løsningene</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+c</label><div class="sd-tab-content docutils">
+<p>Finn alle heltallsløsninger i intervallet [-15, 15] for systemet:</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(2, 1), (-3, 6)\}
-\]</div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="oppgave-3">
-<h2>Oppgave 3<a class="headerlink" href="#oppgave-3" title="Link to this heading">#</a></h2>
-<p>Finn alle heltallsløsninger i intervallet [-15, 15] for systemet</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    2x - y &amp;= 1 \\
-    x^2 + y &amp;= 5
-\end{align*}\]</div>
+\[\begin{split}\begin{align}
+2x - y &amp;= 1 \\
+x^2 + y &amp;= 5
+\end{align}\end{split}\]</div>
 
-        <div id="container-code-aedfd145"></div>
+        <div id="container-code-8b2839c6"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-aedfd145",
+                    "container-code-8b2839c6",
                     code,
                 );
             });
@@ -649,49 +659,37 @@
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(2, 3), (-1, -3)\}
-\]</div>
+\[\mathcal{L} = \{(2, 3), (-1, -3)\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-110 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-122 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi tester alle punkt og skriver ut de som passer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
         <span class="k">if</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(2, 3)</span>
-<span class="gp gp-VirtualEnv">(-1, -3)</span>
-</pre></div>
+<p>Løsningene er <span class="math notranslate nohighlight">\((2, 3)\)</span> og <span class="math notranslate nohighlight">\((-1, -3)\)</span>.</p>
 </div>
-<p>Dermed er løsningene</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(2, 3), (-1, -3)\}
-\]</div>
 </div>
-</section>
-<hr class="docutils" />
-<section id="oppgave-4">
-<h2>Oppgave 4<a class="headerlink" href="#oppgave-4" title="Link to this heading">#</a></h2>
-<p>Lag et program som finner alle heltallsløsninger i intervallet [-20, 20] for systemet</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    x^2 - y^2 &amp;= 9 \\
-    x + y &amp;= 3
-\end{align*}\]</div>
+</div>
+</div>
+<div class="admonition exercise">
+<p class="admonition-title">Oppgave 3</p>
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+a</label><div class="sd-tab-content docutils">
+<p>La <span class="math notranslate nohighlight">\(f(x) = x\)</span> og <span class="math notranslate nohighlight">\(g(x) = 2x - 3\)</span>. Finn alle løsninger der <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> ved å teste verdier fra -10 til 10.</p>
 
-        <div id="container-code-d9f23f17"></div>
+        <div id="container-code-e600daf6"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv koden din her`;
+`# Definer funksjonene og finn løsningene`;
 
                 makeInteractiveCode(
-                    "container-code-d9f23f17",
+                    "container-code-e600daf6",
                     code,
                 );
             });
@@ -699,31 +697,229 @@
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(3, 0), (0, 3)\}
-\]</div>
+\[\mathcal{L} = \{3\}\]</div>
 </div>
-<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-155 dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-158 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi tester alle punkt og skriver ut løsningene:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">3</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = g(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Løsningen er <span class="math notranslate nohighlight">\(x = 3\)</span> fordi <span class="math notranslate nohighlight">\(f(3) = 3\)</span> og <span class="math notranslate nohighlight">\(g(3) = 2(3) - 3 = 3\)</span>.</p>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+b</label><div class="sd-tab-content docutils">
+<p>La <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> og <span class="math notranslate nohighlight">\(g(x) = 2x\)</span>. Finn alle heltallsløsninger der <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> ved å teste verdier fra -5 til 5.</p>
+
+        <div id="container-code-e8ad15d5"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Definer funksjonene og finn løsningene`;
+
+                makeInteractiveCode(
+                    "container-code-e8ad15d5",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \{0, 2\}\]</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-186 dropdown">
+<p class="admonition-title">Løsning</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = g(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Løsningene er <span class="math notranslate nohighlight">\(x = 0\)</span> og <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(x = 0\)</span>: <span class="math notranslate nohighlight">\(0^2 = 0\)</span> og <span class="math notranslate nohighlight">\(2(0) = 0\)</span></p></li>
+<li><p>For <span class="math notranslate nohighlight">\(x = 2\)</span>: <span class="math notranslate nohighlight">\(2^2 = 4\)</span> og <span class="math notranslate nohighlight">\(2(2) = 4\)</span></p></li>
+</ul>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+c</label><div class="sd-tab-content docutils">
+<p>La <span class="math notranslate nohighlight">\(f(x) = x^2 + 1\)</span> og <span class="math notranslate nohighlight">\(g(x) = 5\)</span>. Finn alle heltallsløsninger der <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> ved å teste verdier fra -5 til 5.</p>
+
+        <div id="container-code-78edda28"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Definer funksjonene og finn løsningene`;
+
+                makeInteractiveCode(
+                    "container-code-78edda28",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \{-2, 2\}\]</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-216 dropdown">
+<p class="admonition-title">Løsning</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">5</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = g(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Løsningene oppfyller <span class="math notranslate nohighlight">\(x^2 + 1 = 5\)</span>, som gir <span class="math notranslate nohighlight">\(x^2 = 4\)</span>. Løsningene er <span class="math notranslate nohighlight">\(x = -2\)</span> og <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="docutils">
+<div class="admonition exercise">
+<p class="admonition-title">Oppgave 4</p>
+<p>Avanserte oppgaver med likningssystemer:</p>
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+a</label><div class="sd-tab-content docutils">
+<p>Finn alle heltallsløsninger i intervallet [-20, 20] for systemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+x^2 - y^2 &amp;= 9 \\
+x + y &amp;= 3
+\end{align}\end{split}\]</div>
+
+        <div id="container-code-77dcff85"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Skriv koden din her`;
+
+                makeInteractiveCode(
+                    "container-code-77dcff85",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \{(3, 0), (0, 3)\}\]</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-265 dropdown">
+<p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(3, 0)</span>
-<span class="gp gp-VirtualEnv">(0, 3)</span>
+<p>Løsningene er <span class="math notranslate nohighlight">\((3, 0)\)</span> og <span class="math notranslate nohighlight">\((0, 3)\)</span>.</p>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+b</label><div class="sd-tab-content docutils">
+<p>La <span class="math notranslate nohighlight">\(f(x) = x^3\)</span> og <span class="math notranslate nohighlight">\(g(x) = 4x\)</span>. Finn alle heltallsløsninger der <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> ved å teste verdier fra -3 til 3.</p>
+
+        <div id="container-code-4ddde3a7"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Definer funksjonene og finn løsningene`;
+
+                makeInteractiveCode(
+                    "container-code-4ddde3a7",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \{-2, 0, 2\}\]</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-288 dropdown">
+<p class="admonition-title">Løsning</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = g(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Dermed er løsningene</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{(3, 0), (0, 3)\}
-\]</div>
+<p>Løsningene oppfyller <span class="math notranslate nohighlight">\(x^3 = 4x\)</span>, som gir <span class="math notranslate nohighlight">\(x^3 - 4x = 0\)</span> eller <span class="math notranslate nohighlight">\(x(x^2 - 4) = 0\)</span>.
+Løsningene er <span class="math notranslate nohighlight">\(x = -2\)</span>, <span class="math notranslate nohighlight">\(x = 0\)</span>, og <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
 </div>
-</section>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+c</label><div class="sd-tab-content docutils">
+<p>La <span class="math notranslate nohighlight">\(f(x) = x^2 - 3\)</span> og <span class="math notranslate nohighlight">\(g(x) = x\)</span>. Finn alle løsninger der <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span> ved å teste verdier fra -5 til 5.</p>
+
+        <div id="container-code-f7e0d846"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Definer funksjonene og finn løsningene`;
+
+                makeInteractiveCode(
+                    "container-code-f7e0d846",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \{-1, 3\}\]</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likningssystemer-oppgaver-317 dropdown">
+<p class="admonition-title">Løsning</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = g(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Løsningene oppfyller <span class="math notranslate nohighlight">\(x^2 - 3 = x\)</span>, som gir <span class="math notranslate nohighlight">\(x^2 - x - 3 = 0\)</span>. Med heltallstesting finner vi <span class="math notranslate nohighlight">\(x = -1\)</span> og <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -766,11 +962,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../../likninger_og_ulikheter/likningssystemer/teori.html"
+       href="../tallf%C3%B8lger_og_figurtall/teori.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Likningssystemer</p>
+        <p class="prev-next-title">Programmering av tallfølger</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -780,26 +976,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Innhold
-  </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-1">Oppgave 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-2">Oppgave 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-3">Oppgave 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppgave-4">Oppgave 4</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

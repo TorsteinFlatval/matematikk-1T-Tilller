@@ -299,10 +299,10 @@ x = 5 er en løsning!
 ---
 
 :::::::::::::::{exercise} Underveisoppgave 4
-Løs likningen $x^2 + x - 12 = 0$ ved å teste verdier fra -10 til 10.
+Definer funksjonen $f(x) = x^2 + x - 12$ og finn alle nullpunkt ved å teste verdier fra -10 til 10.
 
 :::{interactive-code}
-# Skriv koden din her
+# Definer funksjonen og finn nullpunktene
 :::
 
 ::::{answer}
@@ -313,11 +313,14 @@ x = 3 er en løsning!
 ::::
 
 ::::{solution}
-Vi bruker en for-løkke som tester verdier fra -10 til 10:
+Vi definerer funksjonen og søker etter nullpunkt (der $f(x) = 0$):
 
 :::{code-block} python
+def f(x):
+    return x**2 + x - 12
+
 for x in range(-10, 11):
-    if x**2 + x - 12 == 0:
+    if f(x) == 0:
         print("x =", x, "er en løsning!")
 :::
 
@@ -329,8 +332,8 @@ x = 3 er en løsning!
 :::
 
 Vi kan sjekke:
-- For $x = -4$: $(-4)^2 + (-4) - 12 = 16 - 4 - 12 = 0$ ✓
-- For $x = 3$: $3^2 + 3 - 12 = 9 + 3 - 12 = 0$ ✓
+- For $x = -4$: $f(-4) = (-4)^2 + (-4) - 12 = 16 - 4 - 12 = 0$ ✓
+- For $x = 3$: $f(3) = 3^2 + 3 - 12 = 9 + 3 - 12 = 0$ ✓
 
 ::::
 
@@ -349,7 +352,7 @@ La oss prøve å løse likningen $2x - 1 = 0$ ved å teste desimalverdier i steg
 x = 0
 while x <= 1:
     if 2*x - 1 == 0:
-        print(f"x = {x:.2f} er en løsning!")
+        print("x = ",x, " er en løsning!")
     x = x + 0.01
 print("Ferdig!")
 :::
