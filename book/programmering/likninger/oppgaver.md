@@ -105,7 +105,8 @@ $$
 
 ::::::::::::::
 
-:::::::::::::::
+::::::::::::::
+
 
 :::::::::::::::{exercise} Oppgave 2
 Definer funksjonen $f(x) = x^2 + 2x + 4$ og finn alle nullpunkt ved å teste verdier fra -10 til 10.
@@ -138,7 +139,7 @@ Siden diskriminanten er negativ, har funksjonen ingen reelle nullpunkt.
 
 ::::
 
-:::::::::::::::
+::::::::::::::
 
 
 :::::::::::::::{exercise} Oppgave 3
@@ -175,93 +176,3 @@ $$
 ::::
 
 :::::::::::::::
-
-Utskriften blir:
-
-:::{code-block} console
-x = 2 er en løsning!
-:::
-
-Løsningen av likningen er derfor:
-
-$$
-\mathcal{L} = \{2\}
-$$
-
-Fordi $2^3 = 8$.
-
-::::
-
-## Oppgave 9
-Finn alle løsninger på likningen $x^2 + 3x - 18 = 0$ og lagre dem i en liste.
-
-:::{interactive-code}
-# Skriv koden din her
-:::
-
-::::{answer}
-$$
-\mathcal{L} = \{-6, 3\}
-$$
-::::
-
-::::{solution}
-Vi lager en tom liste og legger til løsninger vi finner:
-
-:::{code-block} python
-løsninger = []
-
-for x in range(-10, 11):
-    if x**2 + 3*x - 18 == 0:
-        løsninger.append(x)
-
-print("Løsningene er:", løsninger)
-:::
-
-Utskriften blir:
-
-:::{code-block} console
-Løsningene er: [-6, 3]
-:::
-
-Løsningen av likningen er derfor:
-
-$$
-\mathcal{L} = \{-6, 3\}
-$$
-
-::::
-
-## Oppgave 10
-Noen likninger har ingen heltallsløsninger. Hva blir utskriften av programmet nedenfor?
-
-:::{interactive-code}
----
-predict:
----
-for x in range(-10, 11):
-    if x**2 + 1 == 0:
-        print("x =", x, "er en løsning!")
-:::
-
-::::{answer}
-:::{code-block} console
-
-:::
-
-(tomt - ingen løsninger funnet)
-
-::::
-
-::::{solution}
-Likningen $x^2 + 1 = 0$ har ingen reelle løsninger, siden $x^2$ alltid er positiv eller null.
-
-Derfor vil programmet ikke finne noen løsning:
-
-:::{code-block} console
-
-:::
-
-(tomt - ingen løsninger funnet)
-
-::::

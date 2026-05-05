@@ -31,6 +31,10 @@ parts:
       sections:
       - file: book/programmering/likningssystemer/oppgaver.md
         title: Oppgaver
+    - file: book/programmering/tallfølger_og_figurtall/teori.md
+      sections:
+      - file: book/programmering/tallfølger_og_figurtall/oppgaver.md
+        title: Oppgaver
   - caption: Likninger og ulikheter
     chapters:
     - file: book/likninger_og_ulikheter/likningssystemer/teori.md
@@ -41,6 +45,7 @@ parts:
       sections:
       - file: book/likninger_og_ulikheter/ulikheter/oppgaver.md
         title: Oppgaver
+    
 
 
 

@@ -23,7 +23,7 @@ Nedenfor ser du de viktigste sammenligningsoperatorene:
 | `==`{l=python} | Er lik | `5 == 5` | `True`{l=python} |
 | `!=`{l=python} | Er ikke lik | `5 != 3` | `True`{l=python} |
 | `<`{l=python} | Mindre enn | `3 < 5` | `True`{l=python} |
-| `>`{l=python} | Større enn | `5 > 3` | `True`{l=python} |
+| `>`{l=python} | Større enn | `5 < 3` | `False`{l=python} |
 | `<=`{l=python} | Mindre enn eller lik | `5 <= 5` | `True`{l=python} |
 | `>=`{l=python} | Større enn eller lik | `5 >= 3` | `True`{l=python} |
 
