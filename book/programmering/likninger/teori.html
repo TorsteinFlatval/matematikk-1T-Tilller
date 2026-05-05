@@ -16,20 +16,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
@@ -41,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/clickable_figures/style.css?v=d35dfce7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/style.css?v=b30732ed" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/mathjax/style.css?v=194b018e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/figures.css?v=5dd46ff0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/figures.css?v=46e199f0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/geogebra.css?v=fd180d66" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/grids.css?v=7667ba21" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/misc.css?v=55d93a12" />
@@ -51,68 +53,70 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/general_style.css?v=57d653fb" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=241d39f0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=f903e660" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=f760f57b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=951b6e4f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=722631f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/admonitions.css?v=0a2c5d2d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/admonitions.css?v=aacd8e29" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/dialogue.css?v=1b585024" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/figures.css?v=a197b544" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/figures.css?v=acd93126" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/popup.css?v=26181dfd" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/timedQuiz.css?v=89e27729" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/cas_popup.css?v=bae4ad7e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=f75ab0f7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=0cccc4aa" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark.css?v=2454bc3f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/table.css?v=30eed71c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/pairPuzzle/style.css?v=f77426ac" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/parsons/parsonsPuzzle.css?v=8c5c5c21" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=04196dc1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=448841f9" />
     <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
     <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f84a357c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/dialogue.css?v=1b585024" />
     <link rel="stylesheet" type="text/css" href="../../../_static/general_style.css?v=11bbc4b6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/static_code_blocks.css?v=68f9364b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/dialogue.css?v=1b585024" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mathjax/style.css?v=0f1cb662" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f84a357c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactiveCode/style.css?v=23cd07d5" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/clickable_figures/style.css?v=d35dfce7" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/tabs.css?v=a560da15" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/misc.css?v=55d93a12" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/grids.css?v=7667ba21" />
     <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/figures.css?v=5dd46ff0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/tabs.css?v=a560da15" />
     <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pairPuzzle/style.css?v=f77426ac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mathjax/style.css?v=0f1cb662" />
     <link rel="stylesheet" type="text/css" href="../../../_static/parsons_puzzle/parsonsPuzzle.css?v=9fbab2c7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/multipleChoiceQuiz/style.css?v=89e27729" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/pairPuzzle/style.css?v=f77426ac" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
     <link rel="stylesheet" type="text/css" href="../../../_static/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=c712eed9"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/munchboka/fonts/opendyslexic/opendylexic-toggle.js?v=1652b728"></script>
     <script src="../../../_static/munchboka/js/utils.js?v=b59157b9"></script>
     <script src="../../../_static/munchboka/js/casThemeManager.js?v=88874cc7"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
@@ -120,21 +124,22 @@
     <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../../../_static/tabs.js?v=3ee01567"></script>
-    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=fec3e31f"></script>
+    <script src="../../../_static/munchboka/js/solution_timer.js?v=e7176ead"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
     <script src="../../../_static/munchboka/js/flashcards.js?v=293ceac2"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=733f5585"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
-    <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=b934d01d"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/turtleCode.js?v=0d62d95e"></script>
     <script src="../../../_static/munchboka/js/jeopardy.js?v=375a3583"></script>
     <script src="../../../_static/munchboka/js/quiz.js?v=f8bcd7a1"></script>
     <script>let toggleHintShow = 'Klikk for å vise';</script>
     <script>let toggleHintHide = 'Klikk for å skjule';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../../../_static/munchboka/js/popup.js?v=5db611f4"></script>
@@ -153,30 +158,30 @@
     <script src="../../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
     <script src="../../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
     <script src="../../../_static/munchboka/js/pairPuzzle/game.js?v=cb8b0d45"></script>
-    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=fec3e31f"></script>
-    <script src="../../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=62fdd1f2"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=57870877"></script>
     <script src="../../../_static/munchboka/js/print_answer_key.js?v=eebcd271"></script>
-    <script src="../../../_static/serviceWorker.js?v=19bb19ce"></script>
     <script src="../../../_static/static_code_blocks.js?v=e512471c"></script>
-    <script src="../../../_static/utils.js?v=14803243"></script>
     <script src="../../../_static/geogebra-setup.js?v=c67998b1"></script>
-    <script src="../../../_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
-    <script src="../../../_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
-    <script src="../../../_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
-    <script src="../../../_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="../../../_static/utils.js?v=14803243"></script>
+    <script src="../../../_static/serviceWorker.js?v=19bb19ce"></script>
     <script src="../../../_static/interactiveCode/interactiveCodeSetup.js?v=49566f0b"></script>
+    <script src="../../../_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
+    <script src="../../../_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="../../../_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../../_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
     <script src="../../../_static/clickable_figures/clickable_figure.js?v=dd2467e6"></script>
-    <script src="../../../_static/skulpt/skulpt.js?v=51c28977"></script>
-    <script src="../../../_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
-    <script src="../../../_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
-    <script src="../../../_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
-    <script src="../../../_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
-    <script src="../../../_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
-    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
-    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
     <script src="../../../_static/pairPuzzle/dropZone.js?v=56907477"></script>
     <script src="../../../_static/pairPuzzle/game.js?v=cb8b0d45"></script>
-    <script src="../../../_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
+    <script src="../../../_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
+    <script src="../../../_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
+    <script src="../../../_static/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="../../../_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
+    <script src="../../../_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
     <script src="../../../_static/fonts/opendyslexic/opendylexic-toggle.js?v=7208047f"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
@@ -189,10 +194,11 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Oppgaver" href="oppgaver.html" />
-    <link rel="prev" title="Oppgaver: if - else setninger" href="../if_setninger/oppgaver.html" />
+    <link rel="prev" title="Oppgaver: Funksjoner i Python" href="../funksjoner/oppgaver.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="norwegian"/>
+  <meta name="docsearch:version" content="" />
 <!-- Pyodide -->
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 
@@ -244,19 +250,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -264,7 +259,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -272,8 +266,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -289,7 +283,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -319,21 +314,17 @@
     
     
     <img src="../../../_static/Tiller 1T logo.png" class="logo__image only-light" alt="Matematikk 1T - Home"/>
-    <script>document.write(`<img src="../../../_static/Tiller 1T logo.png" class="logo__image only-dark" alt="Matematikk 1T - Home"/>`);</script>
+    <img src="../../../_static/Tiller 1T logo.png" class="logo__image only-dark pst-js-only" alt="Matematikk 1T - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering</span></p>
@@ -342,8 +333,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../for_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../if_setninger/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../if_setninger/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../funksjoner/teori.html">Funksjoner med programmering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../funksjoner/oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Likninger med programmering</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -373,9 +372,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -458,7 +462,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullskjerm-modus"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -472,25 +476,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -513,11 +509,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduksjon-til-for-lokker">Introduksjon til for-løkker</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teste-verdier-i-en-likning">Teste verdier i en likning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sammenligne-verdier-i-en-likning">Sammenligne verdier i en likning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lose-likninger-ved-a-teste-verdier">Løse likninger ved å teste verdier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ikke-lineaere-likninger">Ikke-lineære likninger</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppsummering">Oppsummering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teste-desimalverdier-med-while-lokke">Teste desimalverdier med while-løkke</a></li>
 </ul>
             </nav>
         </div>
@@ -531,132 +525,40 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="likninger-med-programmering">
 <h1>Likninger med programmering<a class="headerlink" href="#likninger-med-programmering" title="Link to this heading">#</a></h1>
-<div class="admonition tip">
+<div class="tip admonition">
 <p class="admonition-title">Læringsmål</p>
 <ul class="simple">
-<li><p>Forstå hvordan for-løkker fungerer i Python</p></li>
 <li><p>Kunne bruke programmering til å løse likninger</p></li>
 <li><p>Kunne systematisk teste ulike verdier i en likning</p></li>
+<li><p>Kunne kombinere <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker og <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-setninger for å finne heltallsløsninger</p></li>
+<li><p>Kunne bruke <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker til å teste desimalverdier</p></li>
 </ul>
 </div>
-<p>I dette kapittelet skal vi lære å løse likninger ved hjelp av programmering. Vi starter helt fra scratch og bygger opp forståelsen steg for steg.</p>
-<section id="introduksjon-til-for-lokker">
-<h2>Introduksjon til for-løkker<a class="headerlink" href="#introduksjon-til-for-lokker" title="Link to this heading">#</a></h2>
-<p>En for-løkke i Python lar oss gjenta en handling flere ganger. Dette er veldig nyttig når vi skal teste mange verdier.</p>
-<p>La oss se på et enkelt eksempel:</p>
-<div class="admonition example">
-<p class="admonition-title">Eksempel 1</p>
-<p>Programmet nedenfor viser en for-løkke fra 0 til 4.</p>
-
-        <div id="container-code-a23a10c2"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`for x in range(5):
-    print(x)`;
-
-                makeInteractiveCode(
-                    "container-code-a23a10c2",
-                    code,
-                );
-            });
-        </script>
-        <div class="admonition solution">
-<p class="admonition-title">Løsning</p>
-<p>Programmet bruker en for-løkke som går gjennom tallene fra 0 til 4 (totalt 5 tall). For hver verdi av <code class="docutils literal notranslate"><span class="pre">x</span></code> skriver programmet ut verdien.</p>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
-<span class="go">1</span>
-<span class="go">2</span>
-<span class="go">3</span>
-<span class="go">4</span>
-</pre></div>
-</div>
-<p>Legg merke til at <code class="docutils literal notranslate"><span class="pre">range(5)</span></code> gir oss tallene fra 0 til 4, ikke til og med 5!</p>
-</div>
-</div>
+<p>I programmering kan vi løse likninger ved å teste mange verdier systematisk. I stedet for å løse algebraisk, lar vi datamaskinen teste alle mulige verdier i et område og finne hvilke som oppfyller likningen.</p>
+<p><strong>Viktig:</strong> Denne metoden fungerer best når vi leter etter <strong>heltallsløsninger</strong>. Hvis løsningene ikke er heltall, vil programmet ikke finne dem når vi bare tester hele tall.</p>
 <hr class="docutils" />
-<div class="admonition example">
-<p class="admonition-title">Eksempel 2</p>
-<p>Programmet nedenfor viser en for-løkke fra 1 til 4.</p>
-
-        <div id="container-code-2a50beed"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`for x in range(1, 5):
-    print(x)`;
-
-                makeInteractiveCode(
-                    "container-code-2a50beed",
-                    code,
-                );
-            });
-        </script>
-        <div class="admonition solution">
-<p class="admonition-title">Løsning</p>
-<p>Nå starter vi på 1 og slutter på 5 (ikke inkludert). For-løkken går altså gjennom tallene 1, 2, 3, 4.</p>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
-<span class="go">2</span>
-<span class="go">3</span>
-<span class="go">4</span>
+<section id="sammenligne-verdier-i-en-likning">
+<h2>Sammenligne verdier i en likning<a class="headerlink" href="#sammenligne-verdier-i-en-likning" title="Link to this heading">#</a></h2>
+<p>For å løse likninger må vi kunne sjekke om en verdi oppfyller likningen. Vi bruker <code class="docutils literal notranslate"><span class="pre">==</span></code> (likhetstegn) til å sammenligne verdier.</p>
+<div class="admonition summary">
+<p class="admonition-title">Sammenligne verdier</p>
+<p>Vi bruker <code class="docutils literal notranslate"><span class="pre">==</span></code> for å sjekke om to verdier er like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">venstre_side</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&lt;</span><span class="n">høyre_side</span><span class="o">&gt;</span><span class="p">:</span>
+<span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Betingelsen er oppfylt!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Merk: <code class="docutils literal notranslate"><span class="pre">==</span></code> brukes for å sammenligne (spørre “er de like?”), mens <code class="docutils literal notranslate"><span class="pre">=</span></code> brukes for å tilordne en verdi.</p>
 </div>
-</div>
-<hr class="docutils" />
-<div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 1</p>
-<p>Hva skriver programmet nedenfor ut?</p>
+<div class="admonition explore">
+<p class="admonition-title">Utforsk 1</p>
+<p>La oss utforske hvordan vi tester om en verdi oppfyller en likning.</p>
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+a</label><div class="sd-tab-content docutils">
+<p>Hva tror du programmet skriver ut når vi tester <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span> med <span class="math notranslate nohighlight">\(x = 4\)</span>?</p>
 
-        <div id="container-code-a8c44a47"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`for x in range(-2, 3):
-    print(x)`;
-
-                makeInteractiveCode(
-                    "container-code-a8c44a47",
-                    code,
-                );
-            });
-        </script>
-        <div class="admonition answer dropdown">
-<p class="admonition-title">Fasit</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-2</span>
-<span class="go">-1</span>
-<span class="go">0</span>
-<span class="go">1</span>
-<span class="go">2</span>
-</pre></div>
-</div>
-</div>
-<div class="admonition solution dropdown">
-<p class="admonition-title">Løsning</p>
-<p>For-løkken går gjennom tallene fra -2 til 2 (ikke inkludert 3).</p>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-2</span>
-<span class="go">-1</span>
-<span class="go">0</span>
-<span class="go">1</span>
-<span class="go">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="teste-verdier-i-en-likning">
-<h2>Teste verdier i en likning<a class="headerlink" href="#teste-verdier-i-en-likning" title="Link to this heading">#</a></h2>
-<p>Nå som vi kan lage for-løkker, kan vi bruke dem til å teste om ulike verdier oppfyller en likning.</p>
-<p>La oss si at vi vil løse likningen <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span>.</p>
-<p>Vi kan teste om en <span class="math notranslate nohighlight">\(x\)</span>-verdi er løsning ved å sjekke om venstresiden blir lik høyresiden.</p>
-<div class="admonition example">
-<p class="admonition-title">Eksempel 3</p>
-<p>Programmet nedenfor tester om <span class="math notranslate nohighlight">\(x = 4\)</span> er løsning på likningen <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span>.</p>
-
-        <div id="container-code-7b70eb3d"></div>
+        <div id="container-code-c2731ba1"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -664,29 +566,19 @@ document.write(`
 if 2*x + 3 == 11:
     print("x =", x, "er en løsning!")`;
 
-                makeInteractiveCode(
-                    "container-code-7b70eb3d",
+                makePredictionInteractiveCode(
+                    "container-code-c2731ba1",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution">
-<p class="admonition-title">Løsning</p>
-<p>Vi setter <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">4</span></code> og regner ut venstresiden: <code class="docutils literal notranslate"><span class="pre">2*x</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">2*4</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">11</span></code>.</p>
-<p>Siden venstresiden er lik 11 (som er høyresiden), er betingelsen <code class="docutils literal notranslate"><span class="pre">2*x</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">11</span></code> sann.</p>
-<p>Derfor skrives meldingen ut:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 4 er en løsning!</span>
-</pre></div>
-</div>
-</div>
-</div>
-<hr class="docutils" />
-<p>Legg merke til at vi bruker to likhetstegn <code class="docutils literal notranslate"><span class="pre">==</span></code> for å sjekke om to verdier er like. Ett likhetstegn <code class="docutils literal notranslate"><span class="pre">=</span></code> brukes for å sette en verdi.</p>
-<div class="admonition example">
-<p class="admonition-title">Eksempel 4</p>
-<p>Programmet nedenfor tester om <span class="math notranslate nohighlight">\(x = 3\)</span> er en løsning på likningen <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span>.</p>
+        </div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+b</label><div class="sd-tab-content docutils">
+<p>Hva tror du programmet skriver ut når vi tester <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span> med <span class="math notranslate nohighlight">\(x = 3\)</span>?</p>
 
-        <div id="container-code-1d3f7a77"></div>
+        <div id="container-code-57710b9d"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -694,68 +586,55 @@ if 2*x + 3 == 11:
 if 2*x + 3 == 11:
     print("x =", x, "er en løsning!")`;
 
-                makeInteractiveCode(
-                    "container-code-1d3f7a77",
+                makePredictionInteractiveCode(
+                    "container-code-57710b9d",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution">
-<p class="admonition-title">Løsning</p>
-<p>Nå tester vi <span class="math notranslate nohighlight">\(x = 3\)</span>: <code class="docutils literal notranslate"><span class="pre">2*3</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">9</span></code>, som ikke er lik 11.</p>
-<p>Derfor skjer ingenting - programmet skriver ikke ut noe.</p>
-<p>Utskriften:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>(tomt)</p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 2</p>
-<p>Endre programmet nedenfor slik at det tester om <span class="math notranslate nohighlight">\(x = 5\)</span> er en løsning på likningen <span class="math notranslate nohighlight">\(3x - 2 = 13\)</span>.</p>
+        </div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+c</label><div class="sd-tab-content docutils">
+<p>Hva tror du programmet skriver ut når vi tester <span class="math notranslate nohighlight">\(3x - 2 = 13\)</span> med <span class="math notranslate nohighlight">\(x = 5\)</span>?</p>
 
-        <div id="container-code-0580f203"></div>
+        <div id="container-code-eb254bc5"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`x = 4
-if 2*x + 3 == 11:
+`x = 5
+if 3*x - 2 == 13:
     print("x =", x, "er en løsning!")`;
 
-                makeInteractiveCode(
-                    "container-code-0580f203",
+                makePredictionInteractiveCode(
+                    "container-code-eb254bc5",
                     code,
                 );
             });
         </script>
-        <div class="admonition answer dropdown">
-<p class="admonition-title">Fasit</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 5 er en løsning!</span>
-</pre></div>
-</div>
-</div>
-<div class="admonition solution dropdown">
-<p class="admonition-title">Løsning</p>
-<p>Vi endrer verdien av <code class="docutils literal notranslate"><span class="pre">x</span></code> til 5 og bruker likningen <span class="math notranslate nohighlight">\(3x - 2 = 13\)</span>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">if</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">13</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;er en løsning!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Siden <span class="math notranslate nohighlight">\(3 \cdot 5 - 2 = 15 - 2 = 13\)</span>, er <span class="math notranslate nohighlight">\(x = 5\)</span> en løsning.</p>
+        </div>
 </div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="lose-likninger-ved-a-teste-verdier">
 <h2>Løse likninger ved å teste verdier<a class="headerlink" href="#lose-likninger-ved-a-teste-verdier" title="Link to this heading">#</a></h2>
-<p>Nå kombinerer vi for-løkker og if-setninger for å finne løsninger på likninger!</p>
+<p>Vi kombinerer <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker og <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-setninger. For hver verdi i løkken sjekker vi om den oppfyller likningen. Hvis ja, skriver vi ut løsningen!</p>
+<div class="admonition summary">
+<p class="admonition-title">Slik løser vi likninger</p>
+<p>For å finne løsninger på en likning tester vi alle heltallsverdier i et område:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">slutt</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="k">if</span> <span class="o">&lt;</span><span class="n">likning</span><span class="o">&gt;</span><span class="p">:</span>
+<span class="linenos">3</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;er en løsning!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alle heltallsverdier av <code class="docutils literal notranslate"><span class="pre">x</span></code> som gjør likningen sann blir skrevet ut.</p>
+</div>
 <div class="admonition example">
-<p class="admonition-title">Eksempel 5</p>
-<p>Programmet nedenfor finner løsningen på likningen <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span> ved å teste alle verdiene fra 0 til 10.</p>
+<p class="admonition-title">Eksempel 1</p>
+<p>La oss løse likningen <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span> ved å teste alle verdier fra 0 til 10.</p>
 
-        <div id="container-code-188dac97"></div>
+        <div id="container-code-1a989283"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -764,15 +643,16 @@ if 2*x + 3 == 11:
         print("x =", x, "er en løsning!")`;
 
                 makeInteractiveCode(
-                    "container-code-188dac97",
+                    "container-code-1a989283",
                     code,
                 );
             });
         </script>
         <div class="admonition solution">
 <p class="admonition-title">Løsning</p>
-<p>For-løkken går gjennom alle verdiene fra 0 til 10. For hver verdi sjekker vi om den oppfyller likningen.</p>
-<p>Kun når <span class="math notranslate nohighlight">\(x = 4\)</span> er venstresiden lik høyresiden, så programmet skriver ut:</p>
+<p>For-løkken tester alle verdier fra 0 til 10. For hver <code class="docutils literal notranslate"><span class="pre">x</span></code> sjekker vi om <span class="math notranslate nohighlight">\(2x + 3 = 11\)</span>.</p>
+<p>Kun når <span class="math notranslate nohighlight">\(x = 4\)</span> er likningen oppfylt: <span class="math notranslate nohighlight">\(2 \cdot 4 + 3 = 11\)</span> ✓</p>
+<p>Utskriften blir:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 4 er en løsning!</span>
 </pre></div>
 </div>
@@ -780,29 +660,104 @@ if 2*x + 3 == 11:
 </div>
 <hr class="docutils" />
 <div class="admonition example">
-<p class="admonition-title">Eksempel 6</p>
-<p>Programmet nedenfor løser likningen <span class="math notranslate nohighlight">\(x^2 = 16\)</span> ved å teste verdier fra -10 til 10.</p>
+<p class="admonition-title">Eksempel 2</p>
+<p>La oss løse likningen <span class="math notranslate nohighlight">\(x^2 - 5 = 20\)</span> ved å teste verdier fra -10 til 10.</p>
 
-        <div id="container-code-c2289993"></div>
+        <div id="container-code-a59de10b"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `for x in range(-10, 11):
-    if x**2 == 16:
+    if x**2 - 5 == 20:
         print("x =", x, "er en løsning!")`;
 
                 makeInteractiveCode(
-                    "container-code-c2289993",
+                    "container-code-a59de10b",
                     code,
                 );
             });
         </script>
         <div class="admonition solution">
 <p class="admonition-title">Løsning</p>
-<p>For-løkken tester alle verdiene fra -10 til 10. Likningen <span class="math notranslate nohighlight">\(x^2 = 16\)</span> har to løsninger: <span class="math notranslate nohighlight">\(x = -4\)</span> og <span class="math notranslate nohighlight">\(x = 4\)</span>.</p>
+<p>Vi løser <span class="math notranslate nohighlight">\(x^2 - 5 = 20\)</span>, som betyr <span class="math notranslate nohighlight">\(x^2 = 25\)</span>.</p>
+<p>Programmet finner begge løsningene <span class="math notranslate nohighlight">\(x = 5\)</span> og <span class="math notranslate nohighlight">\(x = -5\)</span>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 5 er en løsning!</span>
+<span class="go">x = -5 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition exercise">
+<p class="admonition-title">Underveisoppgave 1</p>
+<p>Hva skriver programmet ut når det løser likningen <span class="math notranslate nohighlight">\(3x + 1 = 10\)</span>?</p>
+
+        <div id="container-code-2b6721b9"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`for x in range(10):
+    if 3*x + 1 == 10:
+        print("x =", x, "er en løsning!")`;
+
+                makeInteractiveCode(
+                    "container-code-2b6721b9",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 3 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likninger-teori-182 dropdown">
+<p class="admonition-title">Løsning</p>
+<p>Vi løser <span class="math notranslate nohighlight">\(3x + 1 = 10\)</span>, som betyr <span class="math notranslate nohighlight">\(3x = 9\)</span>, så <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
 <p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = -4 er en løsning!</span>
-<span class="go">x = 4 er en løsning!</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 3 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition exercise">
+<p class="admonition-title">Underveisoppgave 2</p>
+<p>Endre programmet til å løse likningen <span class="math notranslate nohighlight">\(x^2 = 9\)</span> og test verdier fra -5 til 5.</p>
+
+        <div id="container-code-8f0676a5"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`for x in range(11):
+    if 2*x + 3 == 11:
+        print("x =", x, "er en løsning!")`;
+
+                makeInteractiveCode(
+                    "container-code-8f0676a5",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 3 er en løsning!</span>
+<span class="go">x = -3 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likninger-teori-212 dropdown">
+<p class="admonition-title">Løsning</p>
+<p>Vi endrer likningen og søkeområdet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;er en løsning!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Likningen <span class="math notranslate nohighlight">\(x^2 = 9\)</span> har løsningene <span class="math notranslate nohighlight">\(x = 3\)</span> og <span class="math notranslate nohighlight">\(x = -3\)</span>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 3 er en løsning!</span>
+<span class="go">x = -3 er en løsning!</span>
 </pre></div>
 </div>
 </div>
@@ -810,46 +765,48 @@ if 2*x + 3 == 11:
 <hr class="docutils" />
 <div class="admonition exercise">
 <p class="admonition-title">Underveisoppgave 3</p>
-<p>Finn løsningen på likningen <span class="math notranslate nohighlight">\(3x - 5 = 10\)</span> ved å teste verdier fra 0 til 10.</p>
+<p>Løs likningen <span class="math notranslate nohighlight">\(x^2 + x = 6\)</span> ved å teste verdier fra -5 til 5.</p>
 
-        <div id="container-code-17b2fca2"></div>
+        <div id="container-code-de4ebf95"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-17b2fca2",
+                    "container-code-de4ebf95",
                     code,
                 );
             });
         </script>
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 5 er en løsning!</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 2 er en løsning!</span>
+<span class="go">x = -3 er en løsning!</span>
 </pre></div>
 </div>
 </div>
-<div class="admonition solution dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likninger-teori-247 dropdown">
 <p class="admonition-title">Løsning</p>
-<p>Vi bruker en for-løkke som tester verdier fra 0 til 10:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
-    <span class="k">if</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+<p>Vi løser <span class="math notranslate nohighlight">\(x^2 + x = 6\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;er en løsning!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Løsningen er <span class="math notranslate nohighlight">\(x = 5\)</span> fordi <span class="math notranslate nohighlight">\(3 \cdot 5 - 5 = 15 - 5 = 10\)</span>.</p>
+<p>Løsningene er <span class="math notranslate nohighlight">\(x = 2\)</span> og <span class="math notranslate nohighlight">\(x = -3\)</span>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 2 er en løsning!</span>
+<span class="go">x = -3 er en løsning!</span>
+</pre></div>
 </div>
 </div>
-</section>
-<section id="ikke-lineaere-likninger">
-<h2>Ikke-lineære likninger<a class="headerlink" href="#ikke-lineaere-likninger" title="Link to this heading">#</a></h2>
-<p>Metoden fungerer også for mer komplekse likninger!</p>
+</div>
+<hr class="docutils" />
 <div class="admonition example">
-<p class="admonition-title">Eksempel 7</p>
-<p>Programmet nedenfor løser likningen <span class="math notranslate nohighlight">\(x^2 - 3x - 10 = 0\)</span> ved å teste verdier fra -10 til 10.</p>
+<p class="admonition-title">Eksempel 3</p>
+<p>La oss løse likningen <span class="math notranslate nohighlight">\(x^2 - 3x - 10 = 0\)</span> ved å teste verdier fra -10 til 10.</p>
 
-        <div id="container-code-9845665e"></div>
+        <div id="container-code-bcd2b161"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -858,7 +815,7 @@ if 2*x + 3 == 11:
         print("x =", x, "er en løsning!")`;
 
                 makeInteractiveCode(
-                    "container-code-9845665e",
+                    "container-code-bcd2b161",
                     code,
                 );
             });
@@ -866,7 +823,7 @@ if 2*x + 3 == 11:
         <div class="admonition solution">
 <p class="admonition-title">Løsning</p>
 <p>For-løkken tester alle verdiene fra -10 til 10. Likningen har to løsninger: <span class="math notranslate nohighlight">\(x = -2\)</span> og <span class="math notranslate nohighlight">\(x = 5\)</span>.</p>
-<p>La oss sjekke:</p>
+<p>La oss sjekk:</p>
 <ul class="simple">
 <li><p>For <span class="math notranslate nohighlight">\(x = -2\)</span>: <span class="math notranslate nohighlight">\((-2)^2 - 3(-2) - 10 = 4 + 6 - 10 = 0\)</span> ✓</p></li>
 <li><p>For <span class="math notranslate nohighlight">\(x = 5\)</span>: <span class="math notranslate nohighlight">\(5^2 - 3(5) - 10 = 25 - 15 - 10 = 0\)</span> ✓</p></li>
@@ -879,70 +836,30 @@ if 2*x + 3 == 11:
 </div>
 </div>
 <hr class="docutils" />
-<div class="admonition example">
-<p class="admonition-title">Eksempel 8</p>
-<p>Noen likninger har ingen løsninger blant heltallene. Programmet nedenfor tester likningen <span class="math notranslate nohighlight">\(2x - 1 = 0\)</span>.</p>
-
-        <div id="container-code-2e4c8cc1"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`for x in range(-10, 11):
-    if 2*x - 1 == 0:
-        print("x =", x, "er en løsning!")`;
-
-                makeInteractiveCode(
-                    "container-code-2e4c8cc1",
-                    code,
-                );
-            });
-        </script>
-        <p>Vi kan i stedet teste desimalverdier ved å gå i steg på 0.1. Dette er samme idé som <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">range(-10,</span> <span class="pre">10,</span> <span class="pre">0.1)</span></code>, men <code class="docutils literal notranslate"><span class="pre">range</span></code> tar bare heltall, så vi skalerer først og deler etterpå:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">10</span>
-    <span class="k">if</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;er en løsning!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Utskriften blir:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 0.5 er en løsning!</span>
-</pre></div>
-</div>
-<div class="admonition solution">
-<p class="admonition-title">Løsning</p>
-<p>Likningen <span class="math notranslate nohighlight">\(2x - 1 = 0\)</span> har løsningen <span class="math notranslate nohighlight">\(x = \frac{1}{2}\)</span>, som ikke er et heltall.</p>
-<p>Derfor vil programmet ikke finne noen løsning når vi bare tester heltall:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>(tomt - ingen løsninger funnet)</p>
-</div>
-</div>
-<hr class="docutils" />
 <div class="admonition exercise">
 <p class="admonition-title">Underveisoppgave 4</p>
 <p>Løs likningen <span class="math notranslate nohighlight">\(x^2 + x - 12 = 0\)</span> ved å teste verdier fra -10 til 10.</p>
 
-        <div id="container-code-a9b1a94a"></div>
+        <div id="container-code-ffa7cb16"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `# Skriv koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-a9b1a94a",
+                    "container-code-ffa7cb16",
                     code,
                 );
             });
         </script>
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{-4, 3\}
-\]</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = -4 er en løsning!</span>
+<span class="go">x = 3 er en løsning!</span>
+</pre></div>
 </div>
-<div class="admonition solution dropdown">
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likninger-teori-315 dropdown">
 <p class="admonition-title">Løsning</p>
 <p>Vi bruker en for-løkke som tester verdier fra -10 til 10:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
@@ -955,11 +872,6 @@ if 2*x + 3 == 11:
 <span class="go">x = 3 er en løsning!</span>
 </pre></div>
 </div>
-<p>Løsningen av likningen er derfor:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal{L} = \{-4, 3\}
-\]</div>
 <p>Vi kan sjekke:</p>
 <ul class="simple">
 <li><p>For <span class="math notranslate nohighlight">\(x = -4\)</span>: <span class="math notranslate nohighlight">\((-4)^2 + (-4) - 12 = 16 - 4 - 12 = 0\)</span> ✓</p></li>
@@ -968,31 +880,119 @@ if 2*x + 3 == 11:
 </div>
 </div>
 </section>
-<section id="oppsummering">
-<h2>Oppsummering<a class="headerlink" href="#oppsummering" title="Link to this heading">#</a></h2>
-<p>I dette kapittelet har vi lært:</p>
-<ol class="arabic simple">
-<li><p><strong>For-løkker</strong>: Hvordan vi kan gjenta en handling flere ganger</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">range(5)</span></code> gir tallene 0, 1, 2, 3, 4</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">5)</span></code> gir tallene 1, 2, 3, 4</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">range(-2,</span> <span class="pre">3)</span></code> gir tallene -2, -1, 0, 1, 2</p></li>
-</ul>
-</li>
-<li><p><strong>If-setninger</strong>: Hvordan vi kan sjekke om noe er sant</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> brukes for å sjekke om to verdier er like</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> brukes for å sette en verdi</p></li>
-</ul>
-</li>
-<li><p><strong>Løse likninger</strong>: Kombinere for-løkker og if-setninger</p>
-<ul class="simple">
-<li><p>Teste systematisk ulike verdier</p></li>
-<li><p>Finne alle løsninger i et gitt intervall</p></li>
-</ul>
-</li>
-</ol>
-<p>Denne metoden fungerer best når vi leter etter heltallsløsninger. For mer presise løsninger kan vi bruke andre metoder som CAS eller algebraiske metoder.</p>
+<hr class="docutils" />
+<section id="teste-desimalverdier-med-while-lokke">
+<h2>Teste desimalverdier med while-løkke<a class="headerlink" href="#teste-desimalverdier-med-while-lokke" title="Link to this heading">#</a></h2>
+<p>Noen likninger har løsninger som ikke er heltall. Vi kan bruke en <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkke til å teste desimalverdier ved å øke verdien i små steg. Men det er en utfordring!</p>
+<div class="admonition explore">
+<p class="admonition-title">Utforsk 3</p>
+<p>La oss prøve å løse likningen <span class="math notranslate nohighlight">\(2x - 1 = 0\)</span> ved å teste desimalverdier i steg på 0.01. Hva skriver programmet ut?</p>
+
+        <div id="container-code-7c807325"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`x = 0
+while x <= 1:
+    if 2*x - 1 == 0:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01
+print("Ferdig!")`;
+
+                makeInteractiveCode(
+                    "container-code-7c807325",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition solution">
+<p class="admonition-title">Løsning</p>
+<p>Programmet skriver kun “Ferdig!” - det finner ingen løsninger! Men likningen <span class="math notranslate nohighlight">\(2x - 1 = 0\)</span> har jo løsningen <span class="math notranslate nohighlight">\(x = 0.5\)</span>.</p>
+<p><strong>Hvorfor fungerer det ikke?</strong></p>
+<p>Problemet ligger i hvordan datamaskinen lagrer desimaltall. Når vi legger til 0.01 mange ganger (<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">0.01</span></code>), oppstår små avrundingsfeil som gjør at <code class="docutils literal notranslate"><span class="pre">x</span></code> blir verdier som <code class="docutils literal notranslate"><span class="pre">0.5000000000000001</span></code> eller <code class="docutils literal notranslate"><span class="pre">0.4999999999999999</span></code> i stedet for nøyaktig <code class="docutils literal notranslate"><span class="pre">0.5</span></code>. Derfor blir sjekken <code class="docutils literal notranslate"><span class="pre">2*x</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">==</span> <span class="pre">0</span></code> alltid usann.</p>
+<p><strong>Løsningen:</strong> I stedet for å sjekke om resultatet er nøyaktig 0, sjekker vi om det er <strong>nær</strong> 0:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">løsning</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="o">-</span><span class="mf">0.01</span> <span class="o">&lt;</span> <span class="n">løsning</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> er en løsning!&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.01</span>
+</pre></div>
+</div>
+<p>Nå sjekker vi om <code class="docutils literal notranslate"><span class="pre">løsning</span></code> ligger mellom -0.01 og 0.01, noe som fanger opp løsninger selv med små avrundingsfeil.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition example">
+<p class="admonition-title">Eksempel 4</p>
+<p>La oss løse likningen <span class="math notranslate nohighlight">\(2x - 1 = 0\)</span> ved å teste desimalverdier i steg på 0.01, og sjekke om resultatet er nær 0.</p>
+
+        <div id="container-code-840d6f2a"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`x = 0
+while x <= 1:
+    løsning = 2*x - 1
+    if -0.01 < løsning < 0.01:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01`;
+
+                makeInteractiveCode(
+                    "container-code-840d6f2a",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition solution">
+<p class="admonition-title">Løsning</p>
+<p>Ved å sjekke om <code class="docutils literal notranslate"><span class="pre">løsning</span></code> ligger nær 0 (mellom -0.01 og 0.01), kan vi finne løsningen selv med små avrundingsfeil:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 0.50 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition exercise">
+<p class="admonition-title">Underveisoppgave 5</p>
+<p>Løs likningen <span class="math notranslate nohighlight">\(x^2 - 2 = 0\)</span> ved å teste desimalverdier i steg på 0.01 fra 1 til 2.</p>
+<p>Hint: Løsningen er <span class="math notranslate nohighlight">\(x = \sqrt{2} \approx 1.41\)</span>.</p>
+
+        <div id="container-code-876ac0e0"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Skriv koden din her`;
+
+                makeInteractiveCode(
+                    "container-code-876ac0e0",
+                    code,
+                );
+            });
+        </script>
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 1.41 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-programmering-likninger-teori-431 dropdown">
+<p class="admonition-title">Løsning</p>
+<p>Vi bruker en <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkke som tester desimalverdier i steg på 0.01:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">løsning</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="o">-</span><span class="mf">0.01</span> <span class="o">&lt;</span> <span class="n">løsning</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> er en løsning!&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.01</span>
+</pre></div>
+</div>
+<p>Løsningen <span class="math notranslate nohighlight">\(x = \sqrt{2} \approx 1.41\)</span> blir funnet:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">x = 1.41 er en løsning!</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -1029,12 +1029,12 @@ if 2*x + 3 == 11:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../if_setninger/oppgaver.html"
+       href="../funksjoner/oppgaver.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Oppgaver: if - else setninger</p>
+        <p class="prev-next-title">Oppgaver: Funksjoner i Python</p>
       </div>
     </a>
     <a class="right-next"
@@ -1053,20 +1053,20 @@ if 2*x + 3 == 11:
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Innhold
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduksjon-til-for-lokker">Introduksjon til for-løkker</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teste-verdier-i-en-likning">Teste verdier i en likning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sammenligne-verdier-i-en-likning">Sammenligne verdier i en likning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lose-likninger-ved-a-teste-verdier">Løse likninger ved å teste verdier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ikke-lineaere-likninger">Ikke-lineære likninger</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oppsummering">Oppsummering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teste-desimalverdier-med-while-lokke">Teste desimalverdier med while-løkke</a></li>
 </ul>
   </nav></div>
 
@@ -1115,8 +1115,8 @@ Av Torstein Flatval, Tiller Videregående Skole
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

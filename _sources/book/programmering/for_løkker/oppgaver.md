@@ -138,6 +138,21 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 ::::{answer}
+Utskrift:
+
+```text
+1
+2
+3
+4
+5
+6
+7
+8
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -167,6 +182,17 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 ::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -197,6 +223,17 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 ::::{answer}
+Utskrift:
+
+```text
+1
+5
+9
+13
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -226,6 +263,19 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 ::::{answer}
+Utskrift:
+
+```text
+-5
+-3
+-1
+1
+3
+5
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -269,6 +319,16 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 :::::{answer}
+Utskrift:
+
+```text
+10
+6
+2
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 for n in range(10, 1, -4):
     print(n)
@@ -294,6 +354,24 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 :::::{answer}
+Utskrift:
+
+```text
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 for n in range(100, -1, -10):
     print(n)
@@ -319,6 +397,19 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 :::::{answer}
+Utskrift:
+
+```text
+5
+3
+1
+-1
+-3
+-5
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 for n in range(5, -6, -2):
     print(n)
@@ -344,6 +435,18 @@ for n in range(????): # FYLL INN: bytt ut ????
 
 
 :::::{answer}
+Utskrift:
+
+```text
+-2
+-5
+-8
+-11
+-14
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 for n in range(-2, -15, -3):
     print(n)
@@ -382,6 +485,23 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktige tall
 
 
 ::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -407,6 +527,24 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktige tall
 
 
 ::::{answer}
+Utskrift:
+
+```text
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -434,6 +572,33 @@ Lag et program som skriver ut de $20$ **første** partallene.
 
 
 :::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 for n in range(1, 21):
     partall = 2 * n
@@ -458,6 +623,33 @@ Lag et program som skriver ut de $20$ **første** oddetallene.
 
 
 :::::{answer}
+Utskrift:
+
+```text
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 for n in range(1, 21):
     oddetall = 2 * n - 1

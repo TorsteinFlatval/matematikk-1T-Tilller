@@ -16,20 +16,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
@@ -41,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/clickable_figures/style.css?v=d35dfce7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/style.css?v=b30732ed" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/mathjax/style.css?v=194b018e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/figures.css?v=5dd46ff0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/figures.css?v=46e199f0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/geogebra.css?v=fd180d66" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/grids.css?v=7667ba21" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/misc.css?v=55d93a12" />
@@ -51,68 +53,70 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/general_style.css?v=57d653fb" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=241d39f0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=f903e660" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=f760f57b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=951b6e4f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=722631f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/admonitions.css?v=0a2c5d2d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/admonitions.css?v=aacd8e29" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/dialogue.css?v=1b585024" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/figures.css?v=a197b544" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/figures.css?v=acd93126" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/popup.css?v=26181dfd" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/timedQuiz.css?v=89e27729" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/cas_popup.css?v=bae4ad7e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=f75ab0f7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=0cccc4aa" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark.css?v=2454bc3f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/table.css?v=30eed71c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/pairPuzzle/style.css?v=f77426ac" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/parsons/parsonsPuzzle.css?v=8c5c5c21" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=04196dc1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=448841f9" />
     <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
     <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f84a357c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/dialogue.css?v=1b585024" />
     <link rel="stylesheet" type="text/css" href="../../../_static/general_style.css?v=11bbc4b6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/static_code_blocks.css?v=68f9364b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/dialogue.css?v=1b585024" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mathjax/style.css?v=0f1cb662" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f84a357c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactiveCode/style.css?v=23cd07d5" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/clickable_figures/style.css?v=d35dfce7" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/tabs.css?v=a560da15" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/misc.css?v=55d93a12" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/grids.css?v=7667ba21" />
     <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/figures.css?v=5dd46ff0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/tabs.css?v=a560da15" />
     <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pairPuzzle/style.css?v=f77426ac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mathjax/style.css?v=0f1cb662" />
     <link rel="stylesheet" type="text/css" href="../../../_static/parsons_puzzle/parsonsPuzzle.css?v=9fbab2c7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/multipleChoiceQuiz/style.css?v=89e27729" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/pairPuzzle/style.css?v=f77426ac" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
     <link rel="stylesheet" type="text/css" href="../../../_static/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=c712eed9"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/munchboka/fonts/opendyslexic/opendylexic-toggle.js?v=1652b728"></script>
     <script src="../../../_static/munchboka/js/utils.js?v=b59157b9"></script>
     <script src="../../../_static/munchboka/js/casThemeManager.js?v=88874cc7"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
@@ -120,21 +124,22 @@
     <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../../../_static/tabs.js?v=3ee01567"></script>
-    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=fec3e31f"></script>
+    <script src="../../../_static/munchboka/js/solution_timer.js?v=e7176ead"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
     <script src="../../../_static/munchboka/js/flashcards.js?v=293ceac2"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=733f5585"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
-    <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=b934d01d"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/turtleCode.js?v=0d62d95e"></script>
     <script src="../../../_static/munchboka/js/jeopardy.js?v=375a3583"></script>
     <script src="../../../_static/munchboka/js/quiz.js?v=f8bcd7a1"></script>
     <script>let toggleHintShow = 'Klikk for å vise';</script>
     <script>let toggleHintHide = 'Klikk for å skjule';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../../../_static/munchboka/js/popup.js?v=5db611f4"></script>
@@ -153,30 +158,30 @@
     <script src="../../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
     <script src="../../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
     <script src="../../../_static/munchboka/js/pairPuzzle/game.js?v=cb8b0d45"></script>
-    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=fec3e31f"></script>
-    <script src="../../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=62fdd1f2"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=57870877"></script>
     <script src="../../../_static/munchboka/js/print_answer_key.js?v=eebcd271"></script>
-    <script src="../../../_static/serviceWorker.js?v=19bb19ce"></script>
     <script src="../../../_static/static_code_blocks.js?v=e512471c"></script>
-    <script src="../../../_static/utils.js?v=14803243"></script>
     <script src="../../../_static/geogebra-setup.js?v=c67998b1"></script>
-    <script src="../../../_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
-    <script src="../../../_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
-    <script src="../../../_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
-    <script src="../../../_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="../../../_static/utils.js?v=14803243"></script>
+    <script src="../../../_static/serviceWorker.js?v=19bb19ce"></script>
     <script src="../../../_static/interactiveCode/interactiveCodeSetup.js?v=49566f0b"></script>
+    <script src="../../../_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
+    <script src="../../../_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="../../../_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../../_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
     <script src="../../../_static/clickable_figures/clickable_figure.js?v=dd2467e6"></script>
-    <script src="../../../_static/skulpt/skulpt.js?v=51c28977"></script>
-    <script src="../../../_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
-    <script src="../../../_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
-    <script src="../../../_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
-    <script src="../../../_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
-    <script src="../../../_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
-    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
-    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
     <script src="../../../_static/pairPuzzle/dropZone.js?v=56907477"></script>
     <script src="../../../_static/pairPuzzle/game.js?v=cb8b0d45"></script>
-    <script src="../../../_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
+    <script src="../../../_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
+    <script src="../../../_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
+    <script src="../../../_static/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="../../../_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
+    <script src="../../../_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
     <script src="../../../_static/fonts/opendyslexic/opendylexic-toggle.js?v=7208047f"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
@@ -193,6 +198,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="norwegian"/>
+  <meta name="docsearch:version" content="" />
 <!-- Pyodide -->
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 
@@ -244,19 +250,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -264,7 +259,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -272,8 +266,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -289,7 +283,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -319,21 +314,17 @@
     
     
     <img src="../../../_static/Tiller 1T logo.png" class="logo__image only-light" alt="Matematikk 1T - Home"/>
-    <script>document.write(`<img src="../../../_static/Tiller 1T logo.png" class="logo__image only-dark" alt="Matematikk 1T - Home"/>`);</script>
+    <img src="../../../_static/Tiller 1T logo.png" class="logo__image only-dark pst-js-only" alt="Matematikk 1T - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering</span></p>
@@ -342,8 +333,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../programmering/for_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programmering/while_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programmering/while_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../programmering/if_setninger/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../programmering/if_setninger/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programmering/funksjoner/teori.html">Funksjoner med programmering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programmering/funksjoner/oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../programmering/likninger/teori.html">Likninger med programmering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -373,9 +372,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -458,7 +462,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullskjerm-modus"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -472,25 +476,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -617,7 +613,7 @@ x^2 - 2x - 10 \geq -2
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-02-24T23:45:04.555001</dc:date>
+    <dc:date>2026-05-05T18:14:33.295259</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -630,8 +626,8 @@ x^2 - 2x - 10 \geq -2
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="cpl_450678a747f8_4e5fa6_figure_1">
-  <g id="cpl_450678a747f8_4e5fa6_patch_1">
+ <g id="cpl_077e9d265930_e11201_figure_1">
+  <g id="cpl_077e9d265930_e11201_patch_1">
    <path d="M 0 345.6 
 L 460.8 345.6 
 L 460.8 0 
@@ -640,8 +636,8 @@ L 0 345.6
 z
 " style="fill: none"/>
   </g>
-  <g id="cpl_450678a747f8_4e5fa6_axes_1">
-   <g id="cpl_450678a747f8_4e5fa6_patch_2">
+  <g id="cpl_077e9d265930_e11201_axes_1">
+   <g id="cpl_077e9d265930_e11201_patch_2">
     <path d="M 10.8 334.8 
 L 447 334.8 
 L 447 20.016315 
@@ -650,24 +646,24 @@ L 10.8 334.8
 z
 " style="fill: none"/>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_matplotlib.axis_1">
-    <g id="cpl_450678a747f8_4e5fa6_xtick_1">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_1">
+   <g id="cpl_077e9d265930_e11201_matplotlib.axis_1">
+    <g id="cpl_077e9d265930_e11201_xtick_1">
+     <g id="cpl_077e9d265930_e11201_line2d_1">
       <path d="M 47.15 334.8 
 L 47.15 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_2">
+     <g id="cpl_077e9d265930_e11201_line2d_2">
       <defs>
-       <path id="cpl_450678a747f8_4e5fa6_mc085c44946" d="M 0 0 
+       <path id="cpl_077e9d265930_e11201_mc048328010" d="M 0 0 
 L 0 3.5 
 " style="stroke: #000000; stroke-width: 0.8"/>
       </defs>
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="47.15" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="47.15" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_1">
+     <g id="cpl_077e9d265930_e11201_text_1">
       <!-- $\mathdefault{−5}$ -->
       <g transform="translate(34.832209 145.781207) scale(0.2 -0.2)">
        <defs>
@@ -714,18 +710,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_2">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_3">
+    <g id="cpl_077e9d265930_e11201_xtick_2">
+     <g id="cpl_077e9d265930_e11201_line2d_3">
       <path d="M 83.5 334.8 
 L 83.5 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_4">
+     <g id="cpl_077e9d265930_e11201_line2d_4">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="83.5" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="83.5" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_2">
+     <g id="cpl_077e9d265930_e11201_text_2">
       <!-- $\mathdefault{−4}$ -->
       <g transform="translate(71.182209 145.781207) scale(0.2 -0.2)">
        <defs>
@@ -761,18 +757,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_3">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_5">
+    <g id="cpl_077e9d265930_e11201_xtick_3">
+     <g id="cpl_077e9d265930_e11201_line2d_5">
       <path d="M 119.85 334.8 
 L 119.85 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_6">
+     <g id="cpl_077e9d265930_e11201_line2d_6">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="119.85" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="119.85" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_3">
+     <g id="cpl_077e9d265930_e11201_text_3">
       <!-- $\mathdefault{−3}$ -->
       <g transform="translate(107.532209 145.781207) scale(0.2 -0.2)">
        <defs>
@@ -810,18 +806,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_4">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_7">
+    <g id="cpl_077e9d265930_e11201_xtick_4">
+     <g id="cpl_077e9d265930_e11201_line2d_7">
       <path d="M 156.2 334.8 
 L 156.2 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_8">
+     <g id="cpl_077e9d265930_e11201_line2d_8">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="156.2" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="156.2" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_4">
+     <g id="cpl_077e9d265930_e11201_text_4">
       <!-- $\mathdefault{−2}$ -->
       <g transform="translate(143.882209 145.781207) scale(0.2 -0.2)">
        <defs>
@@ -853,18 +849,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_5">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_9">
+    <g id="cpl_077e9d265930_e11201_xtick_5">
+     <g id="cpl_077e9d265930_e11201_line2d_9">
       <path d="M 192.55 334.8 
 L 192.55 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_10">
+     <g id="cpl_077e9d265930_e11201_line2d_10">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="192.55" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="192.55" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_5">
+     <g id="cpl_077e9d265930_e11201_text_5">
       <!-- $\mathdefault{−1}$ -->
       <g transform="translate(180.232209 145.781207) scale(0.2 -0.2)">
        <defs>
@@ -892,97 +888,97 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_6">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_11">
+    <g id="cpl_077e9d265930_e11201_xtick_6">
+     <g id="cpl_077e9d265930_e11201_line2d_11">
       <path d="M 265.25 334.8 
 L 265.25 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_12">
+     <g id="cpl_077e9d265930_e11201_line2d_12">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="265.25" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="265.25" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_6">
+     <g id="cpl_077e9d265930_e11201_text_6">
       <!-- $\mathdefault{1}$ -->
       <g transform="translate(260.680952 145.781207) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-31" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_7">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_13">
+    <g id="cpl_077e9d265930_e11201_xtick_7">
+     <g id="cpl_077e9d265930_e11201_line2d_13">
       <path d="M 301.6 334.8 
 L 301.6 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_14">
+     <g id="cpl_077e9d265930_e11201_line2d_14">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="301.6" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="301.6" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_7">
+     <g id="cpl_077e9d265930_e11201_text_7">
       <!-- $\mathdefault{2}$ -->
       <g transform="translate(297.030952 145.781207) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-32" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_8">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_15">
+    <g id="cpl_077e9d265930_e11201_xtick_8">
+     <g id="cpl_077e9d265930_e11201_line2d_15">
       <path d="M 337.95 334.8 
 L 337.95 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_16">
+     <g id="cpl_077e9d265930_e11201_line2d_16">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="337.95" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="337.95" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_8">
+     <g id="cpl_077e9d265930_e11201_text_8">
       <!-- $\mathdefault{3}$ -->
       <g transform="translate(333.380952 145.781207) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-33" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_9">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_17">
+    <g id="cpl_077e9d265930_e11201_xtick_9">
+     <g id="cpl_077e9d265930_e11201_line2d_17">
       <path d="M 374.3 334.8 
 L 374.3 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_18">
+     <g id="cpl_077e9d265930_e11201_line2d_18">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="374.3" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="374.3" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_9">
+     <g id="cpl_077e9d265930_e11201_text_9">
       <!-- $\mathdefault{4}$ -->
       <g transform="translate(369.730952 145.781207) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-34" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_xtick_10">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_19">
+    <g id="cpl_077e9d265930_e11201_xtick_10">
+     <g id="cpl_077e9d265930_e11201_line2d_19">
       <path d="M 410.65 334.8 
 L 410.65 20.016315 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_20">
+     <g id="cpl_077e9d265930_e11201_line2d_20">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_mc085c44946" x="410.65" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mc048328010" x="410.65" y="124.94421" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_10">
+     <g id="cpl_077e9d265930_e11201_text_10">
       <!-- $\mathdefault{5}$ -->
       <g transform="translate(406.080952 145.781207) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-35" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_text_11">
+    <g id="cpl_077e9d265930_e11201_text_11">
      <!-- $x$ -->
      <g transform="translate(435.913188 167.493837) scale(0.2 -0.2)">
       <defs>
@@ -1024,24 +1020,24 @@ z
      </g>
     </g>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_matplotlib.axis_2">
-    <g id="cpl_450678a747f8_4e5fa6_ytick_1">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_21">
+   <g id="cpl_077e9d265930_e11201_matplotlib.axis_2">
+    <g id="cpl_077e9d265930_e11201_ytick_1">
+     <g id="cpl_077e9d265930_e11201_line2d_21">
       <path d="M 10.8 299.824035 
 L 447 299.824035 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_22">
+     <g id="cpl_077e9d265930_e11201_line2d_22">
       <defs>
-       <path id="cpl_450678a747f8_4e5fa6_md8cfe6ffba" d="M 0 0 
+       <path id="cpl_077e9d265930_e11201_mecdb35b837" d="M 0 0 
 L -3.5 0 
 " style="stroke: #000000; stroke-width: 0.8"/>
       </defs>
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="299.824035" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="299.824035" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_12">
+     <g id="cpl_077e9d265930_e11201_text_12">
       <!-- $\mathdefault{−10}$ -->
       <g transform="translate(188.126322 306.742533) scale(0.2 -0.2)">
        <defs>
@@ -1073,18 +1069,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_ytick_2">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_23">
+    <g id="cpl_077e9d265930_e11201_ytick_2">
+     <g id="cpl_077e9d265930_e11201_line2d_23">
       <path d="M 10.8 264.84807 
 L 447 264.84807 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_24">
+     <g id="cpl_077e9d265930_e11201_line2d_24">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="264.84807" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="264.84807" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_13">
+     <g id="cpl_077e9d265930_e11201_text_13">
       <!-- $\mathdefault{−8}$ -->
       <g transform="translate(197.264417 271.766568) scale(0.2 -0.2)">
        <defs>
@@ -1122,18 +1118,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_ytick_3">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_25">
+    <g id="cpl_077e9d265930_e11201_ytick_3">
+     <g id="cpl_077e9d265930_e11201_line2d_25">
       <path d="M 10.8 229.872105 
 L 447 229.872105 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_26">
+     <g id="cpl_077e9d265930_e11201_line2d_26">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="229.872105" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="229.872105" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_14">
+     <g id="cpl_077e9d265930_e11201_text_14">
       <!-- $\mathdefault{−6}$ -->
       <g transform="translate(197.264417 236.790603) scale(0.2 -0.2)">
        <defs>
@@ -1166,18 +1162,18 @@ z
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_ytick_4">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_27">
+    <g id="cpl_077e9d265930_e11201_ytick_4">
+     <g id="cpl_077e9d265930_e11201_line2d_27">
       <path d="M 10.8 194.89614 
 L 447 194.89614 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_28">
+     <g id="cpl_077e9d265930_e11201_line2d_28">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="194.89614" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="194.89614" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_15">
+     <g id="cpl_077e9d265930_e11201_text_15">
       <!-- $\mathdefault{−4}$ -->
       <g transform="translate(197.264417 201.814638) scale(0.2 -0.2)">
        <use xlink:href="#CMSY10-0" transform="scale(0.996264)"/>
@@ -1185,18 +1181,18 @@ L 447 194.89614
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_ytick_5">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_29">
+    <g id="cpl_077e9d265930_e11201_ytick_5">
+     <g id="cpl_077e9d265930_e11201_line2d_29">
       <path d="M 10.8 159.920175 
 L 447 159.920175 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_30">
+     <g id="cpl_077e9d265930_e11201_line2d_30">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="159.920175" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="159.920175" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_16">
+     <g id="cpl_077e9d265930_e11201_text_16">
       <!-- $\mathdefault{−2}$ -->
       <g transform="translate(197.264417 166.838673) scale(0.2 -0.2)">
        <use xlink:href="#CMSY10-0" transform="scale(0.996264)"/>
@@ -1204,43 +1200,43 @@ L 447 159.920175
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_ytick_6">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_31">
+    <g id="cpl_077e9d265930_e11201_ytick_6">
+     <g id="cpl_077e9d265930_e11201_line2d_31">
       <path d="M 10.8 89.968245 
 L 447 89.968245 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_32">
+     <g id="cpl_077e9d265930_e11201_line2d_32">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="89.968245" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="89.968245" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_17">
+     <g id="cpl_077e9d265930_e11201_text_17">
       <!-- $\mathdefault{2}$ -->
       <g transform="translate(212.761905 96.886744) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-32" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_ytick_7">
-     <g id="cpl_450678a747f8_4e5fa6_line2d_33">
+    <g id="cpl_077e9d265930_e11201_ytick_7">
+     <g id="cpl_077e9d265930_e11201_line2d_33">
       <path d="M 10.8 54.99228 
 L 447 54.99228 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #b0b0b0; stroke-opacity: 0.6; stroke-width: 0.8"/>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_line2d_34">
+     <g id="cpl_077e9d265930_e11201_line2d_34">
       <g>
-       <use xlink:href="#cpl_450678a747f8_4e5fa6_md8cfe6ffba" x="228.9" y="54.99228" style="stroke: #000000; stroke-width: 0.8"/>
+       <use xlink:href="#cpl_077e9d265930_e11201_mecdb35b837" x="228.9" y="54.99228" style="stroke: #000000; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="cpl_450678a747f8_4e5fa6_text_18">
+     <g id="cpl_077e9d265930_e11201_text_18">
       <!-- $\mathdefault{4}$ -->
       <g transform="translate(212.761905 61.910779) scale(0.2 -0.2)">
        <use xlink:href="#CMR17-34" transform="scale(0.996264)"/>
       </g>
      </g>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_text_19">
+    <g id="cpl_077e9d265930_e11201_text_19">
      <!-- $y$ -->
      <g transform="translate(174.613487 16.140682) scale(0.2 -0.2)">
       <defs>
@@ -1282,31 +1278,31 @@ z
      </g>
     </g>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_line2d_35">
+   <g id="cpl_077e9d265930_e11201_line2d_35">
     <defs>
-     <path id="cpl_450678a747f8_4e5fa6_m0a7e1efbc0" d="M 3 0 
+     <path id="cpl_077e9d265930_e11201_m919988e40e" d="M 3 0 
 L -3 -3 
 L -3 3 
 z
 " style="stroke: #000000; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#cpl_450678a747f8_4e5fa6_m0a7e1efbc0" x="447" y="124.94421" style="stroke: #000000; stroke-linejoin: miter"/>
+     <use xlink:href="#cpl_077e9d265930_e11201_m919988e40e" x="447" y="124.94421" style="stroke: #000000; stroke-linejoin: miter"/>
     </g>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_line2d_36">
+   <g id="cpl_077e9d265930_e11201_line2d_36">
     <defs>
-     <path id="cpl_450678a747f8_4e5fa6_mbeff7fcfc0" d="M 0 -3 
+     <path id="cpl_077e9d265930_e11201_mdfb78e121c" d="M 0 -3 
 L -3 3 
 L 3 3 
 z
 " style="stroke: #000000; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#cpl_450678a747f8_4e5fa6_mbeff7fcfc0" x="228.9" y="20.016315" style="stroke: #000000; stroke-linejoin: miter"/>
+     <use xlink:href="#cpl_077e9d265930_e11201_mdfb78e121c" x="228.9" y="20.016315" style="stroke: #000000; stroke-linejoin: miter"/>
     </g>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_line2d_37">
+   <g id="cpl_077e9d265930_e11201_line2d_37">
     <path d="M 110.168113 -1 
 L 116.129134 23.000191 
 L 121.986669 45.667485 
@@ -1384,30 +1380,30 @@ L 409.059147 43.593677
 L 414.810181 21.263531 
 L 420.331887 -1 
 L 420.331887 -1 
-" clip-path="url(#cpl_450678a747f8_4e5fa6_p77f65e4450)" style="fill: none; stroke: #0072b2; stroke-width: 2.5; stroke-linecap: square"/>
+" clip-path="url(#cpl_077e9d265930_e11201_pa099427e24)" style="fill: none; stroke: #0072b2; stroke-width: 2.5; stroke-linecap: square"/>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_patch_3">
+   <g id="cpl_077e9d265930_e11201_patch_3">
     <path d="M 228.9 334.8 
 L 228.9 20.016315 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_patch_4">
+   <g id="cpl_077e9d265930_e11201_patch_4">
     <path d="M 447 334.8 
 L 447 20.016315 
 " style="fill: none"/>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_patch_5">
+   <g id="cpl_077e9d265930_e11201_patch_5">
     <path d="M 10.8 124.94421 
 L 447 124.94421 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_patch_6">
+   <g id="cpl_077e9d265930_e11201_patch_6">
     <path d="M 10.8 20.016315 
 L 447 20.016315 
 " style="fill: none"/>
    </g>
-   <g id="cpl_450678a747f8_4e5fa6_legend_1">
-    <g id="cpl_450678a747f8_4e5fa6_patch_7">
+   <g id="cpl_077e9d265930_e11201_legend_1">
+    <g id="cpl_077e9d265930_e11201_patch_7">
      <path d="M 24.8 63.891949 
 L 98.416648 63.891949 
 Q 102.416648 63.891949 102.416648 59.891949 
@@ -1420,13 +1416,13 @@ Q 20.8 63.891949 24.8 63.891949
 z
 " style="fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_line2d_38">
+    <g id="cpl_077e9d265930_e11201_line2d_38">
      <path d="M 28.8 45.016315 
 L 48.8 45.016315 
 L 68.8 45.016315 
 " style="fill: none; stroke: #0072b2; stroke-width: 2.5; stroke-linecap: square"/>
     </g>
-    <g id="cpl_450678a747f8_4e5fa6_text_20">
+    <g id="cpl_077e9d265930_e11201_text_20">
      <!-- $f$ -->
      <g transform="translate(84.8 52.016315) scale(0.2 -0.2)">
       <defs>
@@ -1467,7 +1463,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="cpl_450678a747f8_4e5fa6_p77f65e4450">
+  <clipPath id="cpl_077e9d265930_e11201_pa099427e24">
    <rect x="10.8" y="20.016315" width="436.2" height="314.783685"/>
   </clipPath>
  </defs>
@@ -1480,7 +1476,7 @@ z
 \mathcal{L} = \langle \gets, -2] \cup [4, \to \rangle
 \]</div>
 </div>
-<div class="admonition solution dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-likninger_og_ulikheter-ulikheter-teori-123 dropdown">
 <p class="admonition-title">Løsning</p>
 <p>Vi ser fra grafen at <span class="math notranslate nohighlight">\(f(x) \geq -2\)</span> når <span class="math notranslate nohighlight">\(x \leq -2\)</span> eller når <span class="math notranslate nohighlight">\(x \geq 4\)</span>. Løsningen er derfor</p>
 <div class="math notranslate nohighlight">
@@ -1550,7 +1546,7 @@ f(x) &lt; 0
 \mathcal{L} = \langle \gets, -1] \cup [2, \to \rangle
 \]</div>
 </div>
-<div class="admonition solution dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-likninger_og_ulikheter-ulikheter-teori-222 dropdown">
 <p class="admonition-title">Løsning</p>
 <p>For å løse ulikheten <span class="math notranslate nohighlight">\(f(x) \geq 0\)</span> må vi se hvor fortegnslinja er <strong>heltrukket</strong> eller <strong>lik null</strong>. Fra fortegnslinja ser vi at <span class="math notranslate nohighlight">\(f(x) \geq 0\)</span> når <span class="math notranslate nohighlight">\(x \leq -1\)</span> eller når <span class="math notranslate nohighlight">\(x \geq 2\)</span>. Løsningen er derfor</p>
 <div class="math notranslate nohighlight">
@@ -1617,7 +1613,7 @@ x^2 + x - 8 &lt; 4
 \mathcal{L} = \langle -4, 3 \rangle
 \]</div>
 </div>
-<div class="admonition solution dropdown">
+<div class="admonition solution solution-timed solution-delay-300 solution-ref-book-likninger_og_ulikheter-ulikheter-teori-314 dropdown">
 <p class="admonition-title">Løsning</p>
 <p>Vi starter med å samle alle leddene på én side slik at vi får <span class="math notranslate nohighlight">\(0\)</span> på høyre side:</p>
 <div class="math notranslate nohighlight">
@@ -1669,9 +1665,9 @@ a</label><div class="sd-tab-content docutils">
 <div class="sidebar-cas">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<button id="button-ggb-cas-7c1e03e0" class="ggb-cas-button">Åpne CAS‑vindu</button>
-<div id="dialog-ggb-cas-7c1e03e0" title="CAS‑vindu" style="display:none;">
-    <div id="ggb-cas-7c1e03e0" class="ggb-window"></div>
+<button id="button-ggb-cas-ff54233a" class="ggb-cas-button">Åpne CAS‑vindu</button>
+<div id="dialog-ggb-cas-ff54233a" title="CAS‑vindu" style="display:none;">
+    <div id="ggb-cas-ff54233a" class="ggb-window"></div>
 </div>
 
 <style>
@@ -1722,12 +1718,12 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
 (function() {
   $(function() {
     let ggbReady = false;
-    const storageKey = 'ggb-cas-state-ggb-cas-7c1e03e0';
+    const storageKey = 'ggb-cas-state-ggb-cas-ff54233a';
 
     function applySize() {
       if (!ggbReady) return;
-      const w = $("#ggb-cas-7c1e03e0").width(),
-            h = $("#ggb-cas-7c1e03e0").height();
+      const w = $("#ggb-cas-ff54233a").width(),
+            h = $("#ggb-cas-ff54233a").height();
       window.ggbApplet.setSize(Math.round(w), Math.round(h));
     }
 
@@ -1798,7 +1794,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
       }
     }
 
-    const $dlg = $("#dialog-ggb-cas-7c1e03e0").dialog({
+    const $dlg = $("#dialog-ggb-cas-ff54233a").dialog({
       autoOpen: false,
       width: 390, height: 580,
       resizable: true, draggable: true,
@@ -1808,7 +1804,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
       open: function() {
         if (!ggbReady) {
           new GGBApplet({
-            appName: "classic", id: "ggb-cas-7c1e03e0",
+            appName: "classic", id: "ggb-cas-ff54233a",
             width: 350, height: 500,
             perspective: "C", language: "nb",
             showToolBar: true, showAlgebraInput: false,
@@ -1820,7 +1816,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
               // Restore state after a short delay to ensure GeoGebra is fully initialized
               setTimeout(restoreState, 100);
             }
-          }, true).inject("ggb-cas-7c1e03e0");
+          }, true).inject("ggb-cas-ff54233a");
         } else {
           applySize();
         }
@@ -1841,12 +1837,12 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
           localStorage.removeItem(storageKey + '-timestamp');
           if (ggbReady && window.ggbApplet) {
             // Clear the container
-            $("#ggb-cas-7c1e03e0").empty();
+            $("#ggb-cas-ff54233a").empty();
             // Reset the flag
             ggbReady = false;
             // Recreate the applet from scratch
             new GGBApplet({
-              appName: "classic", id: "ggb-cas-7c1e03e0",
+              appName: "classic", id: "ggb-cas-ff54233a",
               width: 350, height: 500,
               perspective: "C", language: "nb",
               showToolBar: true, showAlgebraInput: false,
@@ -1856,7 +1852,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
                 ggbReady = true; 
                 applySize();
               }
-            }, true).inject("ggb-cas-7c1e03e0");
+            }, true).inject("ggb-cas-ff54233a");
           }
         } catch (e) {
           console.error('Failed to reset:', e);
@@ -1908,7 +1904,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
             target = target.parentElement;
           }
           // Prevent page scroll but don't stop the event from reaching GeoGebra
-          if (!e.target.closest('#ggb-cas-7c1e03e0')) {
+          if (!e.target.closest('#ggb-cas-ff54233a')) {
             e.preventDefault();
             e.stopPropagation();
           }
@@ -1936,7 +1932,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
     
     // Monitor GeoGebra applet focus/interaction to control scroll lock
     function bindScrollLock() {
-      const ggbContainer = document.getElementById('ggb-cas-7c1e03e0');
+      const ggbContainer = document.getElementById('ggb-cas-ff54233a');
       if (!ggbContainer) {
         setTimeout(bindScrollLock, 300);
         return;
@@ -1982,10 +1978,10 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
     // Cleanup on dialog close
     $dlg.on('dialogclose', unlockScroll);
 
-    $("#button-ggb-cas-7c1e03e0").button()
+    $("#button-ggb-cas-ff54233a").button()
       .on("click touchend pointerup", e => {
         e.preventDefault();
-        $("#dialog-ggb-cas-7c1e03e0").dialog("open");
+        $("#dialog-ggb-cas-ff54233a").dialog("open");
       });
   });
 })();
@@ -2000,9 +1996,9 @@ b</label><div class="sd-tab-content docutils">
 <div class="sidebar-cas">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<button id="button-ggb-cas-66163c04" class="ggb-cas-button">Åpne CAS‑vindu</button>
-<div id="dialog-ggb-cas-66163c04" title="CAS‑vindu" style="display:none;">
-    <div id="ggb-cas-66163c04" class="ggb-window"></div>
+<button id="button-ggb-cas-078d5b33" class="ggb-cas-button">Åpne CAS‑vindu</button>
+<div id="dialog-ggb-cas-078d5b33" title="CAS‑vindu" style="display:none;">
+    <div id="ggb-cas-078d5b33" class="ggb-window"></div>
 </div>
 
 <style>
@@ -2053,12 +2049,12 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
 (function() {
   $(function() {
     let ggbReady = false;
-    const storageKey = 'ggb-cas-state-ggb-cas-66163c04';
+    const storageKey = 'ggb-cas-state-ggb-cas-078d5b33';
 
     function applySize() {
       if (!ggbReady) return;
-      const w = $("#ggb-cas-66163c04").width(),
-            h = $("#ggb-cas-66163c04").height();
+      const w = $("#ggb-cas-078d5b33").width(),
+            h = $("#ggb-cas-078d5b33").height();
       window.ggbApplet.setSize(Math.round(w), Math.round(h));
     }
 
@@ -2129,7 +2125,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
       }
     }
 
-    const $dlg = $("#dialog-ggb-cas-66163c04").dialog({
+    const $dlg = $("#dialog-ggb-cas-078d5b33").dialog({
       autoOpen: false,
       width: 390, height: 580,
       resizable: true, draggable: true,
@@ -2139,7 +2135,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
       open: function() {
         if (!ggbReady) {
           new GGBApplet({
-            appName: "classic", id: "ggb-cas-66163c04",
+            appName: "classic", id: "ggb-cas-078d5b33",
             width: 350, height: 500,
             perspective: "C", language: "nb",
             showToolBar: true, showAlgebraInput: false,
@@ -2151,7 +2147,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
               // Restore state after a short delay to ensure GeoGebra is fully initialized
               setTimeout(restoreState, 100);
             }
-          }, true).inject("ggb-cas-66163c04");
+          }, true).inject("ggb-cas-078d5b33");
         } else {
           applySize();
         }
@@ -2172,12 +2168,12 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
           localStorage.removeItem(storageKey + '-timestamp');
           if (ggbReady && window.ggbApplet) {
             // Clear the container
-            $("#ggb-cas-66163c04").empty();
+            $("#ggb-cas-078d5b33").empty();
             // Reset the flag
             ggbReady = false;
             // Recreate the applet from scratch
             new GGBApplet({
-              appName: "classic", id: "ggb-cas-66163c04",
+              appName: "classic", id: "ggb-cas-078d5b33",
               width: 350, height: 500,
               perspective: "C", language: "nb",
               showToolBar: true, showAlgebraInput: false,
@@ -2187,7 +2183,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
                 ggbReady = true; 
                 applySize();
               }
-            }, true).inject("ggb-cas-66163c04");
+            }, true).inject("ggb-cas-078d5b33");
           }
         } catch (e) {
           console.error('Failed to reset:', e);
@@ -2239,7 +2235,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
             target = target.parentElement;
           }
           // Prevent page scroll but don't stop the event from reaching GeoGebra
-          if (!e.target.closest('#ggb-cas-66163c04')) {
+          if (!e.target.closest('#ggb-cas-078d5b33')) {
             e.preventDefault();
             e.stopPropagation();
           }
@@ -2267,7 +2263,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
     
     // Monitor GeoGebra applet focus/interaction to control scroll lock
     function bindScrollLock() {
-      const ggbContainer = document.getElementById('ggb-cas-66163c04');
+      const ggbContainer = document.getElementById('ggb-cas-078d5b33');
       if (!ggbContainer) {
         setTimeout(bindScrollLock, 300);
         return;
@@ -2313,10 +2309,10 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
     // Cleanup on dialog close
     $dlg.on('dialogclose', unlockScroll);
 
-    $("#button-ggb-cas-66163c04").button()
+    $("#button-ggb-cas-078d5b33").button()
       .on("click touchend pointerup", e => {
         e.preventDefault();
-        $("#dialog-ggb-cas-66163c04").dialog("open");
+        $("#dialog-ggb-cas-078d5b33").dialog("open");
       });
   });
 })();
@@ -2335,9 +2331,9 @@ c</label><div class="sd-tab-content docutils">
 <div class="sidebar-cas">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<button id="button-ggb-cas-31267752" class="ggb-cas-button">Åpne CAS‑vindu</button>
-<div id="dialog-ggb-cas-31267752" title="CAS‑vindu" style="display:none;">
-    <div id="ggb-cas-31267752" class="ggb-window"></div>
+<button id="button-ggb-cas-790c0b4d" class="ggb-cas-button">Åpne CAS‑vindu</button>
+<div id="dialog-ggb-cas-790c0b4d" title="CAS‑vindu" style="display:none;">
+    <div id="ggb-cas-790c0b4d" class="ggb-window"></div>
 </div>
 
 <style>
@@ -2388,12 +2384,12 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
 (function() {
   $(function() {
     let ggbReady = false;
-    const storageKey = 'ggb-cas-state-ggb-cas-31267752';
+    const storageKey = 'ggb-cas-state-ggb-cas-790c0b4d';
 
     function applySize() {
       if (!ggbReady) return;
-      const w = $("#ggb-cas-31267752").width(),
-            h = $("#ggb-cas-31267752").height();
+      const w = $("#ggb-cas-790c0b4d").width(),
+            h = $("#ggb-cas-790c0b4d").height();
       window.ggbApplet.setSize(Math.round(w), Math.round(h));
     }
 
@@ -2464,7 +2460,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
       }
     }
 
-    const $dlg = $("#dialog-ggb-cas-31267752").dialog({
+    const $dlg = $("#dialog-ggb-cas-790c0b4d").dialog({
       autoOpen: false,
       width: 390, height: 580,
       resizable: true, draggable: true,
@@ -2474,7 +2470,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
       open: function() {
         if (!ggbReady) {
           new GGBApplet({
-            appName: "classic", id: "ggb-cas-31267752",
+            appName: "classic", id: "ggb-cas-790c0b4d",
             width: 350, height: 500,
             perspective: "C", language: "nb",
             showToolBar: true, showAlgebraInput: false,
@@ -2486,7 +2482,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
               // Restore state after a short delay to ensure GeoGebra is fully initialized
               setTimeout(restoreState, 100);
             }
-          }, true).inject("ggb-cas-31267752");
+          }, true).inject("ggb-cas-790c0b4d");
         } else {
           applySize();
         }
@@ -2507,12 +2503,12 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
           localStorage.removeItem(storageKey + '-timestamp');
           if (ggbReady && window.ggbApplet) {
             // Clear the container
-            $("#ggb-cas-31267752").empty();
+            $("#ggb-cas-790c0b4d").empty();
             // Reset the flag
             ggbReady = false;
             // Recreate the applet from scratch
             new GGBApplet({
-              appName: "classic", id: "ggb-cas-31267752",
+              appName: "classic", id: "ggb-cas-790c0b4d",
               width: 350, height: 500,
               perspective: "C", language: "nb",
               showToolBar: true, showAlgebraInput: false,
@@ -2522,7 +2518,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
                 ggbReady = true; 
                 applySize();
               }
-            }, true).inject("ggb-cas-31267752");
+            }, true).inject("ggb-cas-790c0b4d");
           }
         } catch (e) {
           console.error('Failed to reset:', e);
@@ -2574,7 +2570,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
             target = target.parentElement;
           }
           // Prevent page scroll but don't stop the event from reaching GeoGebra
-          if (!e.target.closest('#ggb-cas-31267752')) {
+          if (!e.target.closest('#ggb-cas-790c0b4d')) {
             e.preventDefault();
             e.stopPropagation();
           }
@@ -2602,7 +2598,7 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
     
     // Monitor GeoGebra applet focus/interaction to control scroll lock
     function bindScrollLock() {
-      const ggbContainer = document.getElementById('ggb-cas-31267752');
+      const ggbContainer = document.getElementById('ggb-cas-790c0b4d');
       if (!ggbContainer) {
         setTimeout(bindScrollLock, 300);
         return;
@@ -2648,10 +2644,10 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
     // Cleanup on dialog close
     $dlg.on('dialogclose', unlockScroll);
 
-    $("#button-ggb-cas-31267752").button()
+    $("#button-ggb-cas-790c0b4d").button()
       .on("click touchend pointerup", e => {
         e.preventDefault();
-        $("#dialog-ggb-cas-31267752").dialog("open");
+        $("#dialog-ggb-cas-790c0b4d").dialog("open");
       });
   });
 })();
@@ -2726,14 +2722,16 @@ html[data-theme="dark"] .ggb-reset-btn:hover {
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Innhold
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafisk-losning">Grafisk løsning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraisk-losning">Algebraisk løsning</a><ul class="nav section-nav flex-column">
@@ -2788,8 +2786,8 @@ Av Torstein Flatval, Tiller Videregående Skole
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

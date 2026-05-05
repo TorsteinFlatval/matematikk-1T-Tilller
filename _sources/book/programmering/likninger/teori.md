@@ -1,227 +1,112 @@
 # Likninger med programmering
 
-
-:::{goals} Læringsmål
-* Forstå hvordan for-løkker fungerer i Python
+:::::{admonition} Læringsmål
+---
+class: tip
+---
 * Kunne bruke programmering til å løse likninger
 * Kunne systematisk teste ulike verdier i en likning
-:::
+* Kunne kombinere `for`{l=python}-løkker og `if`{l=python}-setninger for å finne heltallsløsninger
+* Kunne bruke `while`{l=python}-løkker til å teste desimalverdier
+:::::
 
-I dette kapittelet skal vi lære å løse likninger ved hjelp av programmering. Vi starter helt fra scratch og bygger opp forståelsen steg for steg.
+I programmering kan vi løse likninger ved å teste mange verdier systematisk. I stedet for å løse algebraisk, lar vi datamaskinen teste alle mulige verdier i et område og finne hvilke som oppfyller likningen. 
 
+**Viktig:** Denne metoden fungerer best når vi leter etter **heltallsløsninger**. Hvis løsningene ikke er heltall, vil programmet ikke finne dem når vi bare tester hele tall.
 
-## Introduksjon til for-løkker
-
-En for-løkke i Python lar oss gjenta en handling flere ganger. Dette er veldig nyttig når vi skal teste mange verdier.
-
-La oss se på et enkelt eksempel:
-
-:::::::::::::::{example} Eksempel 1
-Programmet nedenfor viser en for-løkke fra 0 til 4.
-
-:::{interactive-code}
-for x in range(5):
-    print(x)
-:::
-
-::::{solution}
----
-dropdown: 0
 ---
 
-Programmet bruker en for-løkke som går gjennom tallene fra 0 til 4 (totalt 5 tall). For hver verdi av `x` skriver programmet ut verdien.
+## Sammenligne verdier i en likning
 
-Utskriften blir:
+For å løse likninger må vi kunne sjekke om en verdi oppfyller likningen. Vi bruker `==` (likhetstegn) til å sammenligne verdier.
 
-:::{code-block} console
-0
-1
-2
-3
-4
+:::::::::::::::{summary} Sammenligne verdier
+Vi bruker `==` for å sjekke om to verdier er like:
+
+:::{code-block} python
+---
+linenos:
+---
+if <venstre_side> == <høyre_side>:
+    print("Betingelsen er oppfylt!")
 :::
 
-Legg merke til at `range(5)` gir oss tallene fra 0 til 4, ikke til og med 5!
-
-::::
-
+Merk: `==` brukes for å sammenligne (spørre "er de like?"), mens `=` brukes for å tilordne en verdi.
 :::::::::::::::
 
----
+:::::::::::::::{explore} Utforsk 1
+La oss utforske hvordan vi tester om en verdi oppfyller en likning.
 
-:::::::::::::::{example} Eksempel 2
-Programmet nedenfor viser en for-løkke fra 1 til 4.
+::::::::::::::{tab-set}
+---
+class: tabs-parts
+---
+:::::::::::::{tab-item} a
+Hva tror du programmet skriver ut når vi tester $2x + 3 = 11$ med $x = 4$?
 
 :::{interactive-code}
-for x in range(1, 5):
-    print(x)
-:::
-
-::::{solution}
 ---
-dropdown: 0
+predict:
 ---
-
-Nå starter vi på 1 og slutter på 5 (ikke inkludert). For-løkken går altså gjennom tallene 1, 2, 3, 4.
-
-Utskriften blir:
-
-:::{code-block} console
-1
-2
-3
-4
-:::
-
-::::
-
-:::::::::::::::
-
----
-
-:::::::::::::::{exercise} Underveisoppgave 1
-Hva skriver programmet nedenfor ut?
-
-:::{interactive-code}
-for x in range(-2, 3):
-    print(x)
-:::
-
-::::{answer}
-:::{code-block} console
--2
--1
-0
-1
-2
-:::
-::::
-
-::::{solution}
-For-løkken går gjennom tallene fra -2 til 2 (ikke inkludert 3).
-
-Utskriften blir:
-
-:::{code-block} console
--2
--1
-0
-1
-2
-:::
-::::
-
-:::::::::::::::
-
-
-## Teste verdier i en likning
-
-Nå som vi kan lage for-løkker, kan vi bruke dem til å teste om ulike verdier oppfyller en likning.
-
-La oss si at vi vil løse likningen $2x + 3 = 11$.
-
-Vi kan teste om en $x$-verdi er løsning ved å sjekke om venstresiden blir lik høyresiden.
-
-:::::::::::::::{example} Eksempel 3
-Programmet nedenfor tester om $x = 4$ er løsning på likningen $2x + 3 = 11$.
-
-:::{interactive-code}
 x = 4
 if 2*x + 3 == 11:
     print("x =", x, "er en løsning!")
 :::
+:::::::::::::
 
-::::{solution}
----
-dropdown: 0
----
-
-Vi setter `x = 4` og regner ut venstresiden: `2*x + 3 = 2*4 + 3 = 11`.
-
-Siden venstresiden er lik 11 (som er høyresiden), er betingelsen `2*x + 3 == 11` sann.
-
-Derfor skrives meldingen ut:
-
-:::{code-block} console
-x = 4 er en løsning!
-:::
-
-::::
-
-:::::::::::::::
-
----
-
-Legg merke til at vi bruker to likhetstegn `==` for å sjekke om to verdier er like. Ett likhetstegn `=` brukes for å sette en verdi.
-
-:::::::::::::::{example} Eksempel 4
-Programmet nedenfor tester om $x = 3$ er en løsning på likningen $2x + 3 = 11$.
+:::::::::::::{tab-item} b
+Hva tror du programmet skriver ut når vi tester $2x + 3 = 11$ med $x = 3$?
 
 :::{interactive-code}
+---
+predict:
+---
 x = 3
 if 2*x + 3 == 11:
     print("x =", x, "er en løsning!")
 :::
+:::::::::::::
 
-::::{solution}
----
-dropdown: 0
----
-
-Nå tester vi $x = 3$: `2*3 + 3 = 9`, som ikke er lik 11.
-
-Derfor skjer ingenting - programmet skriver ikke ut noe.
-
-Utskriften:
-:::{code-block} console
-
-:::
-
-(tomt)
-
-::::
-
-:::::::::::::::
-
----
-
-:::::::::::::::{exercise} Underveisoppgave 2
-Endre programmet nedenfor slik at det tester om $x = 5$ er en løsning på likningen $3x - 2 = 13$.
+:::::::::::::{tab-item} c
+Hva tror du programmet skriver ut når vi tester $3x - 2 = 13$ med $x = 5$?
 
 :::{interactive-code}
-x = 4
-if 2*x + 3 == 11:
-    print("x =", x, "er en løsning!")
-:::
-
-::::{answer}
-:::{code-block} console
-x = 5 er en løsning!
-:::
-::::
-
-::::{solution}
-Vi endrer verdien av `x` til 5 og bruker likningen $3x - 2 = 13$:
-
-:::{code-block} python
+---
+predict:
+---
 x = 5
 if 3*x - 2 == 13:
     print("x =", x, "er en løsning!")
 :::
+:::::::::::::
 
-Siden $3 \cdot 5 - 2 = 15 - 2 = 13$, er $x = 5$ en løsning.
-
-::::
+::::::::::::::
 
 :::::::::::::::
 
+---
 
 ## Løse likninger ved å teste verdier
 
-Nå kombinerer vi for-løkker og if-setninger for å finne løsninger på likninger!
+Vi kombinerer `for`{l=python}-løkker og `if`{l=python}-setninger. For hver verdi i løkken sjekker vi om den oppfyller likningen. Hvis ja, skriver vi ut løsningen!
 
-:::::::::::::::{example} Eksempel 5
-Programmet nedenfor finner løsningen på likningen $2x + 3 = 11$ ved å teste alle verdiene fra 0 til 10.
+:::::::::::::::{summary} Slik løser vi likninger
+For å finne løsninger på en likning tester vi alle heltallsverdier i et område:
+
+:::{code-block} python
+---
+linenos:
+---
+for x in range(start, slutt):
+    if <likning>:
+        print("x =", x, "er en løsning!")
+:::
+
+Alle heltallsverdier av `x` som gjør likningen sann blir skrevet ut.
+:::::::::::::::
+
+:::::::::::::::{example} Eksempel 1
+La oss løse likningen $2x + 3 = 11$ ved å teste alle verdier fra 0 til 10.
 
 :::{interactive-code}
 for x in range(11):
@@ -234,9 +119,11 @@ for x in range(11):
 dropdown: 0
 ---
 
-For-løkken går gjennom alle verdiene fra 0 til 10. For hver verdi sjekker vi om den oppfyller likningen.
+For-løkken tester alle verdier fra 0 til 10. For hver `x` sjekker vi om $2x + 3 = 11$.
 
-Kun når $x = 4$ er venstresiden lik høyresiden, så programmet skriver ut:
+Kun når $x = 4$ er likningen oppfylt: $2 \cdot 4 + 3 = 11$ ✓
+
+Utskriften blir:
 
 :::{code-block} console
 x = 4 er en løsning!
@@ -248,12 +135,12 @@ x = 4 er en løsning!
 
 ---
 
-:::::::::::::::{example} Eksempel 6
-Programmet nedenfor løser likningen $x^2 = 16$ ved å teste verdier fra -10 til 10.
+:::::::::::::::{example} Eksempel 2
+La oss løse likningen $x^2 - 5 = 20$ ved å teste verdier fra -10 til 10.
 
 :::{interactive-code}
 for x in range(-10, 11):
-    if x**2 == 16:
+    if x**2 - 5 == 20:
         print("x =", x, "er en løsning!")
 :::
 
@@ -262,13 +149,13 @@ for x in range(-10, 11):
 dropdown: 0
 ---
 
-For-løkken tester alle verdiene fra -10 til 10. Likningen $x^2 = 16$ har to løsninger: $x = -4$ og $x = 4$.
+Vi løser $x^2 - 5 = 20$, som betyr $x^2 = 25$.
 
-Utskriften blir:
+Programmet finner begge løsningene $x = 5$ og $x = -5$:
 
 :::{code-block} console
-x = -4 er en løsning!
-x = 4 er en løsning!
+x = 5 er en løsning!
+x = -5 er en løsning!
 :::
 
 ::::
@@ -277,8 +164,74 @@ x = 4 er en løsning!
 
 ---
 
+:::::::::::::::{exercise} Underveisoppgave 1
+Hva skriver programmet ut når det løser likningen $3x + 1 = 10$?
+
+:::{interactive-code}
+for x in range(10):
+    if 3*x + 1 == 10:
+        print("x =", x, "er en løsning!")
+:::
+
+::::{answer}
+:::{code-block} console
+x = 3 er en løsning!
+:::
+::::
+
+::::{solution}
+Vi løser $3x + 1 = 10$, som betyr $3x = 9$, så $x = 3$.
+
+Utskriften blir:
+
+:::{code-block} console
+x = 3 er en løsning!
+:::
+::::
+
+:::::::::::::::
+
+---
+
+:::::::::::::::{exercise} Underveisoppgave 2
+Endre programmet til å løse likningen $x^2 = 9$ og test verdier fra -5 til 5.
+
+:::{interactive-code}
+for x in range(11):
+    if 2*x + 3 == 11:
+        print("x =", x, "er en løsning!")
+:::
+
+::::{answer}
+:::{code-block} console
+x = 3 er en løsning!
+x = -3 er en løsning!
+:::
+::::
+
+::::{solution}
+Vi endrer likningen og søkeområdet:
+
+:::{code-block} python
+for x in range(-5, 6):
+    if x**2 == 9:
+        print("x =", x, "er en løsning!")
+:::
+
+Likningen $x^2 = 9$ har løsningene $x = 3$ og $x = -3$:
+
+:::{code-block} console
+x = 3 er en løsning!
+x = -3 er en løsning!
+:::
+::::
+
+:::::::::::::::
+
+---
+
 :::::::::::::::{exercise} Underveisoppgave 3
-Finn løsningen på likningen $3x - 5 = 10$ ved å teste verdier fra 0 til 10.
+Løs likningen $x^2 + x = 6$ ved å teste verdier fra -5 til 5.
 
 :::{interactive-code}
 # Skriv koden din her
@@ -286,32 +239,34 @@ Finn løsningen på likningen $3x - 5 = 10$ ved å teste verdier fra 0 til 10.
 
 ::::{answer}
 :::{code-block} console
-x = 5 er en løsning!
+x = 2 er en løsning!
+x = -3 er en løsning!
 :::
 ::::
 
 ::::{solution}
-Vi bruker en for-løkke som tester verdier fra 0 til 10:
+Vi løser $x^2 + x = 6$:
 
 :::{code-block} python
-for x in range(11):
-    if 3*x - 5 == 10:
+for x in range(-5, 6):
+    if x**2 + x == 6:
         print("x =", x, "er en løsning!")
 :::
 
-Løsningen er $x = 5$ fordi $3 \cdot 5 - 5 = 15 - 5 = 10$.
+Løsningene er $x = 2$ og $x = -3$:
 
+:::{code-block} console
+x = 2 er en løsning!
+x = -3 er en løsning!
+:::
 ::::
 
 :::::::::::::::
 
+---
 
-## Ikke-lineære likninger
-
-Metoden fungerer også for mer komplekse likninger!
-
-:::::::::::::::{example} Eksempel 7
-Programmet nedenfor løser likningen $x^2 - 3x - 10 = 0$ ved å teste verdier fra -10 til 10.
+:::::::::::::::{example} Eksempel 3
+La oss løse likningen $x^2 - 3x - 10 = 0$ ved å teste verdier fra -10 til 10.
 
 :::{interactive-code}
 for x in range(-10, 11):
@@ -326,7 +281,7 @@ dropdown: 0
 
 For-løkken tester alle verdiene fra -10 til 10. Likningen har to løsninger: $x = -2$ og $x = 5$.
 
-La oss sjekke:
+La oss sjekk:
 - For $x = -2$: $(-2)^2 - 3(-2) - 10 = 4 + 6 - 10 = 0$ ✓
 - For $x = 5$: $5^2 - 3(5) - 10 = 25 - 15 - 10 = 0$ ✓
 
@@ -343,51 +298,6 @@ x = 5 er en løsning!
 
 ---
 
-:::::::::::::::{example} Eksempel 8
-Noen likninger har ingen løsninger blant heltallene. Programmet nedenfor tester likningen $2x - 1 = 0$.
-
-:::{interactive-code}
-for x in range(-10, 11):
-    if 2*x - 1 == 0:
-        print("x =", x, "er en løsning!")
-:::
-
-Vi kan i stedet teste desimalverdier ved å gå i steg på 0.1. Dette er samme idé som `for x in range(-10, 10, 0.1)`, men `range` tar bare heltall, så vi skalerer først og deler etterpå:
-
-:::{code-block} python
-for i in range(-100, 101):
-    x = i / 10
-    if 2*x - 1 == 0:
-        print("x =", x, "er en løsning!")
-:::
-
-Utskriften blir:
-
-:::{code-block} console
-x = 0.5 er en løsning!
-:::
-
-::::{solution}
----
-dropdown: 0
----
-
-Likningen $2x - 1 = 0$ har løsningen $x = \frac{1}{2}$, som ikke er et heltall.
-
-Derfor vil programmet ikke finne noen løsning når vi bare tester heltall:
-
-:::{code-block} console
-
-:::
-
-(tomt - ingen løsninger funnet)
-
-::::
-
-:::::::::::::::
-
----
-
 :::::::::::::::{exercise} Underveisoppgave 4
 Løs likningen $x^2 + x - 12 = 0$ ved å teste verdier fra -10 til 10.
 
@@ -396,9 +306,10 @@ Løs likningen $x^2 + x - 12 = 0$ ved å teste verdier fra -10 til 10.
 :::
 
 ::::{answer}
-$$
-\mathcal{L} = \{-4, 3\}
-$$
+:::{code-block} console
+x = -4 er en løsning!
+x = 3 er en løsning!
+:::
 ::::
 
 ::::{solution}
@@ -417,12 +328,6 @@ x = -4 er en løsning!
 x = 3 er en løsning!
 :::
 
-Løsningen av likningen er derfor:
-
-$$
-\mathcal{L} = \{-4, 3\}
-$$
-
 Vi kan sjekke:
 - For $x = -4$: $(-4)^2 + (-4) - 12 = 16 - 4 - 12 = 0$ ✓
 - For $x = 3$: $3^2 + 3 - 12 = 9 + 3 - 12 = 0$ ✓
@@ -431,24 +336,116 @@ Vi kan sjekke:
 
 :::::::::::::::
 
+---
 
+## Teste desimalverdier med while-løkke
 
-## Oppsummering
+Noen likninger har løsninger som ikke er heltall. Vi kan bruke en `while`{l=python}-løkke til å teste desimalverdier ved å øke verdien i små steg. Men det er en utfordring!
 
-I dette kapittelet har vi lært:
+:::::::::::::::{explore} Utforsk 3
+La oss prøve å løse likningen $2x - 1 = 0$ ved å teste desimalverdier i steg på 0.01. Hva skriver programmet ut?
 
-1. **For-løkker**: Hvordan vi kan gjenta en handling flere ganger
-   - `range(5)` gir tallene 0, 1, 2, 3, 4
-   - `range(1, 5)` gir tallene 1, 2, 3, 4
-   - `range(-2, 3)` gir tallene -2, -1, 0, 1, 2
+:::{interactive-code}
+x = 0
+while x <= 1:
+    if 2*x - 1 == 0:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01
+print("Ferdig!")
+:::
 
-2. **If-setninger**: Hvordan vi kan sjekke om noe er sant
-   - `==` brukes for å sjekke om to verdier er like
-   - `=` brukes for å sette en verdi
+::::{solution}
+---
+dropdown: 0
+---
 
-3. **Løse likninger**: Kombinere for-løkker og if-setninger
-   - Teste systematisk ulike verdier
-   - Finne alle løsninger i et gitt intervall
+Programmet skriver kun "Ferdig!" - det finner ingen løsninger! Men likningen $2x - 1 = 0$ har jo løsningen $x = 0.5$.
 
+**Hvorfor fungerer det ikke?**
 
-Denne metoden fungerer best når vi leter etter heltallsløsninger. For mer presise løsninger kan vi bruke andre metoder som CAS eller algebraiske metoder.
+Problemet ligger i hvordan datamaskinen lagrer desimaltall. Når vi legger til 0.01 mange ganger (`x = x + 0.01`), oppstår små avrundingsfeil som gjør at `x` blir verdier som `0.5000000000000001` eller `0.4999999999999999` i stedet for nøyaktig `0.5`. Derfor blir sjekken `2*x - 1 == 0` alltid usann.
+
+**Løsningen:** I stedet for å sjekke om resultatet er nøyaktig 0, sjekker vi om det er **nær** 0:
+
+:::{code-block} python
+x = 0
+while x <= 1:
+    løsning = 2*x - 1
+    if -0.01 < løsning < 0.01:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01
+:::
+
+Nå sjekker vi om `løsning` ligger mellom -0.01 og 0.01, noe som fanger opp løsninger selv med små avrundingsfeil.
+
+::::
+
+:::::::::::::::
+
+---
+
+:::::::::::::::{example} Eksempel 4
+La oss løse likningen $2x - 1 = 0$ ved å teste desimalverdier i steg på 0.01, og sjekke om resultatet er nær 0.
+
+:::{interactive-code}
+x = 0
+while x <= 1:
+    løsning = 2*x - 1
+    if -0.01 < løsning < 0.01:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01
+:::
+
+::::{solution}
+---
+dropdown: 0
+---
+
+Ved å sjekke om `løsning` ligger nær 0 (mellom -0.01 og 0.01), kan vi finne løsningen selv med små avrundingsfeil:
+
+:::{code-block} console
+x = 0.50 er en løsning!
+:::
+
+::::
+
+:::::::::::::::
+
+---
+
+:::::::::::::::{exercise} Underveisoppgave 5
+Løs likningen $x^2 - 2 = 0$ ved å teste desimalverdier i steg på 0.01 fra 1 til 2.
+
+Hint: Løsningen er $x = \sqrt{2} \approx 1.41$.
+
+:::{interactive-code}
+# Skriv koden din her
+:::
+
+::::{answer}
+:::{code-block} console
+x = 1.41 er en løsning!
+:::
+::::
+
+::::{solution}
+Vi bruker en `while`{l=python}-løkke som tester desimalverdier i steg på 0.01:
+
+:::{code-block} python
+x = 1
+while x <= 2:
+    løsning = x**2 - 2
+    if -0.01 < løsning < 0.01:
+        print(f"x = {x:.2f} er en løsning!")
+    x = x + 0.01
+:::
+
+Løsningen $x = \sqrt{2} \approx 1.41$ blir funnet:
+
+:::{code-block} console
+x = 1.41 er en løsning!
+:::
+
+::::
+
+::::::::::::::::
