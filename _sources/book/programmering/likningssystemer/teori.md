@@ -354,41 +354,41 @@ $$\mathcal{L} = \{1\}$$
 
 ---
 
-:::::::::::::::{exercise} Underveisoppgave 2
-Løs likningssystemet ved å teste verdier fra -10 til 10:
 
-$$\begin{align}
-x + y &= 2 \\
-x - y &= 6
-\end{align}$$
+
+---
+
+:::::::::::::::{example} Eksempel 4
+La oss løse $f(x) = g(x)$ der $f(x) = x^2$ og $g(x) = 2x$ ved å teste desimalverdier i steg på 0.1 fra -1 til 3.
 
 :::{interactive-code}
-# Skriv koden din her
-:::
+def f(x):
+    return x**2
 
-::::{answer}
-$$\mathcal{L} = \{(4, -2)\}$$
-::::
+def g(x):
+    return 2*x
+
+x = -1
+while x <= 3:
+    differanse = f(x) - g(x)
+    if -0.1 < differanse < 0.1:
+        print(f"x = {x:.2f}: f({x:.2f}) = {f(x):.2f}, g({x:.2f}) = {g(x):.2f}")
+    x = x + 0.1
+:::
 
 ::::{solution}
-Vi bruker nøstede `for`{l=python}-løkker:
+---
+dropdown: 0
+---
 
-:::{code-block} python
-for x in range(-10, 11):
-    for y in range(-10, 11):
-        if x + y == 2 and x - y == 6:
-            print((x, y))
-:::
-
-Utskriften blir:
+Ved å sjekke om differansen mellom $f(x)$ og $g(x)$ ligger nær 0, finner vi de punktene der funksjonene har omtrent samme verdi:
 
 :::{code-block} console
-(4, -2)
+x = 0.00: f(0.00) = 0.00, g(0.00) = 0.00
+x = 2.00: f(2.00) = 4.00, g(2.00) = 4.00
 :::
 
-Løsningen er:
-
-$$\mathcal{L} = \{(4, -2)\}$$
+Løsningene er $x = 0$ og $x = 2$.
 
 ::::
 
@@ -396,44 +396,50 @@ $$\mathcal{L} = \{(4, -2)\}$$
 
 ---
 
-:::::::::::::::{exercise} Underveisoppgave 3
-Løs likningssystemet ved å teste verdier fra -10 til 10:
-
-$$\begin{align}
-x^2 + y &= 9 \\
-x + y &= 3
-\end{align}$$
+:::::::::::::::{exercise} Underveisoppgave 2
+Definer funksjonene $f(x) = x^2 - 1$ og $g(x) = 0.5x + 1$. Finn hvor de har samme verdi ved å teste desimalverdier i steg på 0.1 fra -3 til 3.
 
 :::{interactive-code}
-# Skriv koden din her
+# Definer funksjonene og finn løsningene
 :::
 
 ::::{answer}
-$$\mathcal{L} = \{(2, 1), (-3, 6)\}$$
+Løsningene er omtrent $x \approx -1.20$ og $x \approx 1.70$.
 ::::
 
 ::::{solution}
-Vi tester begge likningene samtidig:
+Vi definerer funksjonene og tester desimalverdier med toleransekontroll:
 
 :::{code-block} python
-for x in range(-10, 11):
-    for y in range(-10, 11):
-        if x**2 + y == 9 and x + y == 3:
-            print((x, y))
+def f(x):
+    return x**2 - 1
+
+def g(x):
+    return 0.5*x + 1
+
+x = -3
+while x <= 3:
+    differanse = f(x) - g(x)
+    if -0.1 < differanse < 0.1:
+        print(f"x = {x:.2f}: f({x:.2f}) = {f(x):.2f}, g({x:.2f}) = {g(x):.2f}")
+    x = x + 0.1
 :::
 
-Utskriften blir:
+Utskriften viser punktene der funksjonene er omtrent like:
 
 :::{code-block} console
-(2, 1)
-(-3, 6)
+x = -1.20: f(-1.20) = 0.44, g(-1.20) = 0.40
+x = 1.70: f(1.70) = 1.89, g(1.70) = 1.85
 :::
 
-Løsningene er:
+Løsningene er $x \approx -1.20$ og $x \approx 1.70$.
 
-$$\mathcal{L} = \{(2, 1), (-3, 6)\}$$
+:::{code-block} console
+x = -1.20: f(-1.20) = 0.44, g(-1.20) = 0.40
+x = 1.70: f(1.70) = 1.89, g(1.70) = 1.85
+:::
 
-::::
+Løsningspunktene er omtrent $(−1.20, 0.40)$ og $(1.70, 1.85)$.
 
 :::::::::::::::
 
